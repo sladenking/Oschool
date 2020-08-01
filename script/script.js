@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.header'),
     main = document.querySelector('.main');
 
-  window.addEventListener('scroll', function() {
+  const scrollWindow = () => {
     main.style.opacity = 1 + pageYOffset/(-700);
     if (pageYOffset > 100) {
       header.style.background = '#fff';
@@ -15,6 +15,21 @@ document.addEventListener('DOMContentLoaded', () => {
       header.style.background = '';
       header.style.height = '';
     }
+  };
+
+  //ProgressBar
+  const progress = document.querySelector('.progress');
+
+  const progressBar = event => {
+    let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let percent = windowScroll / windowHeight * 100;
+    progress.style.width = percent + '%';
+  };
+
+  window.addEventListener('scroll', () => {
+    scrollWindow();
+    progressBar();
   });
 
 
@@ -30,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   
   const scrollHead = () => {
-		const btnScrolling = document.querySelector('a[href="#info"]');
+		const btnScrolling = document.querySelector('a[href="#about"]');
 		btnScrolling.addEventListener('click', event => {
 			event.preventDefault();
 			scroll(btnScrolling);
@@ -41,9 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	document.body.addEventListener('click', event => {
     const target = event.target;
-    console.log(target);
     if (target.closest('.header-logo')) {
-			scroll(target);
+			pageYOffset = 0;
 		}
-	});
+  });
+  
 });

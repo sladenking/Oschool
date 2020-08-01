@@ -1,3 +1,6 @@
+$primary: #00a99d
+$secondary: #f7931e
+  
 html 
   box-sizing: border-box
   margin: 0
@@ -12,13 +15,21 @@ body
   box-sizing: inherit
   margin: 0
   padding: 0
-  
 
-$primary: #00a99d
-$secondary: #f7931e
+.progress
+  position: fixed
+  left: 0
+  top: 0
+  width: 0%
+  height: 5px
+  background: $secondary
+  z-index: 3
+
+
 
 @import './components/_font'  
 @import './components/_header'
 @import './components/_container'
 @import './components/_main'
-@import './components/_info'
+@import './components/_about'
+@import './components/_stages'

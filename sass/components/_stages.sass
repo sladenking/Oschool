@@ -1,0 +1,36 @@
+.stages
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  z-index: 2
+  margin-top: 200vh
+  height: 100vh
+  min-height: 100vh
+  width: 100%
+  +norm
+  background: url('../img/stages-bg.jpg') no-repeat center center
+  background-size: 100% auto
+  color: #fff
+  &-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 100%
+  &-title
+      font-size: 35px
+      color: $secondary
+  &-subtitle
+    font-size: 30px
+  &-list
+    display: flex
+    justify-content: space-between
+    &__left
+      flex-basis: 40%
+    &__right
+      flex-basis: 40%
+    &__item
+      height: 150px
+      font-size: 25px
+  &-icon
+    height: 10px

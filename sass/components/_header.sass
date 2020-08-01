@@ -5,16 +5,18 @@
   height: 80px
   width: 100%
   position: fixed
-  z-index: 1
+  z-index: 3
   background: transparent
   transition: all 0.3s
   .container
     position: fixed
+    height: 60px
   &-wrapper
     height: 100%
     display: flex
     justify-content: space-between
     align-items: center
+    padding-top: 5px
   &-logo
     background: url('../img/logo.svg') no-repeat center center
     height: 40px 
@@ -28,8 +30,8 @@
     &:hover
       background-color: $primary
     &__facebook
-      mask: url('../img/facebook-icon.svg')
+      mask: url('../img/facebook-icon.svg') no-repeat center center
     &__instagram
-      mask: url('../img/instagram-icon.svg')
+      mask: url('../img/instagram-icon.svg') no-repeat center center
     &__phone
-      mask: url('../img/phone-icon.svg')
+      mask: url('../img/phone-icon.svg') no-repeat center center
