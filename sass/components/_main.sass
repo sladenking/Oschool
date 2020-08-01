@@ -2,4 +2,24 @@
   min-height: 100vh
   height: 100vh
   width: 100%
-  background: url('../img/left-bg.png') no-repeat left -350px top -20px fixed, url('../img/right-bg.png') no-repeat right -350px top -20px fixed
+  display: flex
+  justify-content: space-around
+  align-items: center
+  background: url('../img/left-bg.png') no-repeat left -350px top -20px fixed, url('../img/right-bg.png') no-repeat right -350px top -20px fixed, url(../img/main-bg.jpg) no-repeat fixed
+  &-wrapper
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  &-logo
+    width: 400px
+  &-title
+    color: $secondary
+    font-size: 50px
+    +norm
+    letter-spacing: 2px
+  &-scroll__text
+    +norm
+    letter-spacing: 1px
+    padding-top: 30px
