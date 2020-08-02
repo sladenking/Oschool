@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.body.addEventListener('click', event => {
     const target = event.target;
     if (target.closest('.header-logo')) {
-			pageYOffset = 0;
+			window.scrollTo(pageXOffset, 0);
 		}
   });
   

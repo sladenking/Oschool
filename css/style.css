@@ -298,4 +298,119 @@ body {
 .stages-icon {
   height: 10px;
 }
+
+.subjects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  margin-top: 300vh;
+  font-family: 'Futura-Medium', sans-serif;
+  background: url("../img/lines.png") repeat-y top left, #fff;
+  background-size: 70px;
+}
+
+.subjects-wrapper {
+  margin-top: 60px;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.subjects-title {
+  font-size: 35px;
+  color: #00a99d;
+}
+
+.subjects-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.subjects-text {
+  font-size: 20px;
+}
+
+.subjects-item {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #f7931e;
+  font-size: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.subjects-item:hover {
+  color: #00a99d;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.subjects-item__england {
+  background: url("../img/subjects/england.svg") no-repeat top center;
+  background-size: auto 70%;
+  margin-bottom: 60px;
+}
+
+.subjects-item__ukraine {
+  background: url("../img/subjects/ukraine.svg") no-repeat top center;
+  background-size: auto 70%;
+  margin-bottom: 60px;
+}
+
+.subjects-item__chemistry {
+  background: url("../img/subjects/chemistry.svg") no-repeat top center;
+  background-size: auto 70%;
+  margin-bottom: 60px;
+}
+
+.subjects-item__physics {
+  background: url("../img/subjects/physics.svg") no-repeat top center;
+  background-size: auto 70%;
+}
+
+.subjects-item__biology {
+  background: url("../img/subjects/biology.svg") no-repeat top center;
+  background-size: auto 70%;
+}
+
+.subjects-item__math {
+  background: url("../img/subjects/math.svg") no-repeat top center;
+  background-size: auto 70%;
+}
 /*# sourceMappingURL=style.css.map */
