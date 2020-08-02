@@ -1,0 +1,69 @@
+.teachers
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100vh
+  min-height: 100vh
+  width: 100%
+  position: absolute
+  z-index: 2
+  margin-top: 500vh
+  +norm
+  background: $primary
+  background-size: 100% auto
+  &-wrapper
+    margin-top: 60px
+    height: 90vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+  &-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-title
+    font-size: 35px
+    color: #fff
+  &-slider
+    width: 100%
+    margin: 0 auto
+    &__container
+      overflow: hidden
+    &__track
+      width: 100%
+      display: flex
+      transition: .5s
+    &__item
+      overflow: hidden
+      height: 390px
+      text-align: right
+      div
+        transition: transform .5s
+      &:hover div
+        transform: translateY(-150%)
+    &__btns
+      display: flex
+  &-info
+    color: #fff
+    img
+      height: 50px
+    &__name
+      width: 100%
+    &__subject
+      width: 100%
+  &-img
+    width: 100%
+
+.btn
+  height: 30px
+  width: 30px
+  display: block
+  cursor: pointer
+  background: #fff
+  margin-left: 30px
+  &-prev
+    mask: url('../img/prev.svg') no-repeat center center
+    background-size: cover
+  &-next
+    mask: url('../img/next.svg') no-repeat center center
+    background-size: cover

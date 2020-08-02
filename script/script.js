@@ -54,11 +54,81 @@ document.addEventListener('DOMContentLoaded', () => {
   
   scrollHead();
 
-	document.body.addEventListener('click', event => {
-    const target = event.target;
-    if (target.closest('.header-logo')) {
-			window.scrollTo(pageXOffset, 0);
-		}
+	// document.body.addEventListener('click', event => {
+  //   const target = event.target;
+  //   if (target.closest('.header-logo')) {
+	// 		window.scrollTo(pageXOffset, 0);
+	// 	}
+  // });
+
+  //Slider
+  class Slider {
+    elements;
+    buttons;
+    position = 0;
+    movePosition;
+    maxPosition;
+
+    constructor(wrapper, config) {
+        this.elements = {
+            container: wrapper.querySelector('.teachers-slider__container'),
+            track: wrapper.querySelector('.teachers-slider__track'),
+            items: wrapper.querySelectorAll('.teachers-slider__item')
+        };
+
+        this.buttons = {
+            prev: document.querySelector('.btn-prev'),
+            next: document.querySelector('.btn-next'),
+        };
+
+        const itemWidth = this.elements.container.clientWidth / config.slidesToShow
+        this.movePosition = config.slidesToScroll * itemWidth;
+        this.maxPosition = -(this.elements.items.length * itemWidth - config.slidesToShow * itemWidth);
+        this.elements.items.forEach((item) => item.style.minWidth = `${itemWidth}px`);
+        this.buttons.prev.addEventListener('click', () => this.handlePrevClick());
+        this.buttons.next.addEventListener('click', () => this.handleNextClick());
+        this.checkBtns();
+    }
+
+    handlePrevClick() {
+        this.position += this.movePosition;
+        if(this.position > 0) {
+            this.position = 0;
+        }
+        this.setPosition();
+        this.checkBtns();
+    }
+
+    handleNextClick() {
+        this.position -= this.movePosition;
+        if(this.position < this.maxPosition) {
+            this.position = this.maxPosition;
+        }
+        this.setPosition();
+        this.checkBtns();
+    }
+
+    setPosition() {
+        this.elements.track.style.transform = `translateX(${this.position}px)`
+    }
+
+    checkBtns() {  
+      if (this.position === 0) {
+        this.buttons.prev.style.background = 'rgba(0,0,0,.2)';
+      } else {
+        this.buttons.prev.style.background = '#fff';
+      }
+      if (this.position <= this.maxPosition) {
+        this.buttons.next.style.background = 'rgba(0,0,0,.2)';
+      } else {
+        this.buttons.next.style.background = '#fff';
+      }
+    }
+  }
+
+  new Slider(document.querySelector('.teachers-slider'), {
+    slidesToShow: 3,
+    slidesToScroll: 1
   });
   
 });
