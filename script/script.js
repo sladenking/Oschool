@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const scrollWindow = () => {
     main.style.opacity = 1 + pageYOffset/(-700);
-    if (pageYOffset > 100) {
+    if (pageYOffset > 50) {
       header.style.background = '#fff';
       header.style.height = '60px';
     } else {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //ProgressBar
   const progress = document.querySelector('.progress');
 
-  const progressBar = event => {
+  const progressBar = () => {
     let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
     let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let percent = windowScroll / windowHeight * 100;
@@ -54,12 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
   scrollHead();
 
-	// document.body.addEventListener('click', event => {
-  //   const target = event.target;
-  //   if (target.closest('.header-logo')) {
-	// 		window.scrollTo(pageXOffset, 0);
-	// 	}
-  // });
+	document.body.addEventListener('click', event => {
+    const target = event.target;
+    if (target.closest('.header-logo')) {
+      scroll(target)
+		}
+  });
 
   //Slider
   class Slider {
