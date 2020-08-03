@@ -130,5 +130,69 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesToShow: 3,
     slidesToScroll: 1
   });
+
+  //Slider
+	const slider = () => {
+    const slide = document.querySelectorAll('.reviews-slider__item'),
+      dots = document.querySelector('.reviews-slider__dots'),
+      slider = document.querySelector('.reviews-slider__container');
+      
+    for (let i = 0; i < slide.length; i++) {
+      dots.insertAdjacentHTML('beforeend',
+        `<li class="dot ${i === 0 ? 'dot-active' : ''}"></li>`);
+    }
+
+    const dot = document.querySelectorAll('.dot');
+
+		let currentSlide = 0, interval;
+
+		const prevSlide = (elem, i, strClass) => {
+      elem[i].classList.remove(strClass);
+		};
+
+		const nextSlide = (elem, i, strClass) => {
+			elem[i].classList.add(strClass);
+		};
+		
+		const autoPlaySlide = () => {
+
+      prevSlide(slide, currentSlide, 'active-slide');
+      prevSlide(dot, currentSlide, 'dot-active');
+			currentSlide++;
+			if (currentSlide >= slide.length) {
+				currentSlide = 0;
+			}
+      nextSlide(slide, currentSlide, 'active-slide');
+      nextSlide(dot, currentSlide, 'dot-active');
+
+		};
+
+		const startSlide = (time = 5000) => {
+			interval = setInterval(autoPlaySlide, time);
+		};
+
+		slider.addEventListener('click', event => {
+			event.preventDefault();
+
+      const target = event.target;
+
+      prevSlide(slide, currentSlide, 'portfolio-item-active');
+      prevSlide(dot, currentSlide, 'dot-active');
+
+			if (currentSlide >= slide.length) {
+				currentSlide = 0;
+			} else if (currentSlide < 0) {
+				currentSlide = slide.length - 1;
+      }
+      
+      nextSlide(slide, currentSlide, 'portfolio-item-active');
+      nextSlide(dot, currentSlide, 'dot-active');
+
+		});
+
+		startSlide();
+	}
+
+	slider();
   
 });

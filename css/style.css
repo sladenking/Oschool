@@ -609,4 +609,185 @@ body {
           mask: url("../img/next.svg") no-repeat center center;
   background-size: cover;
 }
+
+.reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Futura-Medium', sans-serif;
+  background: url("../img/reviews-bg.jpg") no-repeat center center;
+  background-size: cover;
+  color: #f7931e;
+}
+
+.reviews-wrapper {
+  margin-top: 60px;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.reviews-title {
+  font-size: 35px;
+}
+
+.reviews-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews-slider {
+  width: 100%;
+  height: 70vh;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.reviews-slider__dots {
+  width: 100%;
+  margin: 20px auto 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 5;
+}
+
+.reviews-slider__dots .dot {
+  height: 16px;
+  width: 16px;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: solid #00a99d;
+  display: inline-block;
+  -webkit-transition: background-color, -webkit-transform .7s;
+  transition: background-color, -webkit-transform .7s;
+  transition: background-color, transform .7s;
+  transition: background-color, transform .7s, -webkit-transform .7s;
+}
+
+.reviews-slider__dots .dot-active {
+  background-color: #f7931e;
+  border: solid #f7931e;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.reviews-slider__container {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews-slider__item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity .7s;
+  transition: opacity .7s;
+}
+
+.reviews-slider__img {
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.reviews-btn {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  cursor: pointer;
+  background: #f7931e;
+  margin-left: 30px;
+}
+
+.reviews-btn-prev {
+  -webkit-mask: url("../img/prev.svg") no-repeat center center;
+          mask: url("../img/prev.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.reviews-btn-next {
+  -webkit-mask: url("../img/next.svg") no-repeat center center;
+          mask: url("../img/next.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.active-slide {
+  opacity: 1;
+}
+
+.questions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Futura-Medium', sans-serif;
+  background: #fff;
+  color: #00a99d;
+}
+
+.questions-wrapper {
+  margin-top: 60px;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.questions-title {
+  font-size: 35px;
+}
 /*# sourceMappingURL=style.css.map */

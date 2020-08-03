@@ -1,0 +1,82 @@
+.reviews
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100vh
+  min-height: 100vh
+  width: 100%
+  +norm
+  background: url('../img/reviews-bg.jpg') no-repeat center center
+  background-size: cover
+  color: $secondary
+  &-wrapper
+    margin-top: 60px
+    height: 90vh
+    display: flex
+    flex-direction: column
+  &-title
+    font-size: 35px
+  &-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-slider
+    width: 100%
+    height: 70vh
+    display: block
+    margin: 0 auto
+    position: relative
+    &__dots
+      width: 100%
+      margin: 20px auto 0
+      padding: 0
+      display: flex
+      justify-content: center
+      z-index: 5
+      .dot
+        height: 16px
+        width: 16px
+        margin: 0 5px
+        border-radius: 50%
+        border: solid $primary
+        display: inline-block
+        transition: background-color, transform .7s
+        &-active
+          background-color: $secondary
+          border: solid $secondary
+          transform: scale(1.2)
+    &__container
+      overflow: hidden
+      display: flex
+      justify-content: center
+      align-items: center
+    &__item
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 100%
+      opacity: 0
+      transition: opacity .7s
+    &__img
+      height: 500px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+  &-btn
+    height: 30px
+    width: 30px
+    display: inline-block
+    cursor: pointer
+    background: $secondary
+    margin-left: 30px
+    &-prev
+      mask: url('../img/prev.svg') no-repeat center center
+      background-size: cover
+    &-next
+      mask: url('../img/next.svg') no-repeat center center
+      background-size: cover
+
+.active-slide
+  opacity: 1
