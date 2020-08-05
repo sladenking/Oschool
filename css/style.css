@@ -48,7 +48,7 @@ body {
   height: 80px;
   width: 100%;
   position: fixed;
-  z-index: 3;
+  z-index: 5;
   background: transparent;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -491,13 +491,12 @@ body {
   min-height: 100vh;
   width: 100%;
   font-family: 'Futura-Medium', sans-serif;
-  background: #00a99d;
-  background-size: 100% auto;
+  background: url("../img/lines.png") repeat-y top right, #fff;
+  background-size: 70px;
 }
 
 .teachers-wrapper {
-  margin-top: 60px;
-  height: 90vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,7 +523,7 @@ body {
 
 .teachers-title {
   font-size: 35px;
-  color: #fff;
+  color: #00a99d;
 }
 
 .teachers-slider {
@@ -594,7 +593,6 @@ body {
   width: 30px;
   display: block;
   cursor: pointer;
-  background: #fff;
   margin-left: 30px;
 }
 
@@ -675,7 +673,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 5;
+  z-index: 3;
 }
 
 .reviews-slider__dots .dot {
@@ -771,13 +769,13 @@ body {
   min-height: 100vh;
   width: 100%;
   font-family: 'Futura-Medium', sans-serif;
-  background: #fff;
+  background: url("../img/lines.png") repeat-y top left, #fff;
+  background-size: 70px;
   color: #00a99d;
 }
 
 .questions-wrapper {
-  margin-top: 60px;
-  height: 90vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -785,9 +783,49 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .questions-title {
   font-size: 35px;
+}
+
+.questions-item {
+  margin-bottom: 20px;
+}
+
+.questions-item__question {
+  cursor: pointer;
+  font-size: 25px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: #00a99d;
+  color: #fff;
+  -webkit-transition: background-color .5s ease-out;
+  transition: background-color .5s ease-out;
+}
+
+.questions-item__answer {
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 0 10px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .5s ease-out;
+  transition: max-height .5s ease-out;
+}
+
+.active-answer {
+  max-height: 500px;
+  -webkit-transition: max-height .5s ease-in;
+  transition: max-height .5s ease-in;
+}
+
+.active-question {
+  background-color: #f7931e;
+  -webkit-transition: background-color .5s ease-in;
+  transition: background-color .5s ease-in;
 }
 /*# sourceMappingURL=style.css.map */

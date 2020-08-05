@@ -6,12 +6,38 @@
   min-height: 100vh
   width: 100%
   +norm
-  background: #fff
+  background: url('../img/lines.png') repeat-y top left, #fff
+  background-size: 70px 
   color: $primary
   &-wrapper
-    margin-top: 60px
-    height: 90vh
+    height: 100vh
     display: flex
     flex-direction: column
+    justify-content: center
   &-title
     font-size: 35px
+  &-item
+    margin-bottom: 20px
+    &__question
+      cursor: pointer
+      font-size: 25px
+      padding: 10px 20px
+      border-radius: 15px
+      background-color: $primary
+      color: #fff
+      transition: background-color .5s ease-out
+    &__answer
+      font-size: 20px
+      margin-top: 10px
+      padding: 0 10px
+      max-height: 0
+      overflow: hidden
+      transition: max-height .5s ease-out
+
+.active
+  &-answer
+    max-height: 500px
+    transition: max-height .5s ease-in
+  &-question
+    background-color: $secondary
+    transition: background-color .5s ease-in

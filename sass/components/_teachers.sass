@@ -6,11 +6,10 @@
   min-height: 100vh
   width: 100%
   +norm
-  background: $primary
-  background-size: 100% auto
+  background: url('../img/lines.png') repeat-y top right, #fff
+  background-size: 70px 
   &-wrapper
-    margin-top: 60px
-    height: 90vh
+    height: 100vh
     display: flex
     flex-direction: column
     justify-content: center
@@ -20,7 +19,7 @@
     align-items: center
   &-title
     font-size: 35px
-    color: #fff
+    color: $primary
   &-slider
     width: 100%
     margin: 0 auto
@@ -55,7 +54,6 @@
   width: 30px
   display: block
   cursor: pointer
-  background: #fff
   margin-left: 30px
   &-prev
     mask: url('../img/prev.svg') no-repeat center center
