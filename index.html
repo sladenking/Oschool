@@ -293,6 +293,34 @@
     <div class="container">
       <div class="feedback-wrapper">
         <h1 class="feedback-title">Оставьте заявку</h1>
+        <form action="" class="feedback-form">
+          <div class="feedback-form__container">
+            <div class="feedback-form__header">
+              <div class="feedback-form__head">
+                <label for="uname"><b>Ваше имя</b></label>
+                <input type="text" name="uname" class="feedback-form__input inputs" required>
+              </div>
+              <div class="feedback-form__head">
+                <label for="phone"><b>Номер телефона</b></label>
+                <input type="tel" name="phone" class="feedback-form__input inputs" required>
+              </div>   
+              <div class="feedback-form__head">
+                <label for="phone"><b>Как с Вами связаться?</b></label>
+                <select type="tel" class="feedback-form__select inputs">
+                  <option>Телефонный звонок</option>
+                  <option>Viber</option>
+                  <option>Telegram</option>
+                  <option>WhatsApp</option>
+                </select>
+              </div>
+            </div>
+            <div class="feedback-form__message">
+              <label for="text"><b>Ваше сообщение</b></label>
+              <textarea type="text" name="text" class="feedback-form__textarea inputs" placeholder="Спросите, что именно вас интересует и мы отправим вам нужную информацию или напишите время, когда вы хотите чтобы мы с вами связались!"></textarea>
+            </div>
+            <button type="submit" class="feedback-form__btn">Оставить заявку</button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
