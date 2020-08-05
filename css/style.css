@@ -970,9 +970,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 180px;
+  height: 80px;
   width: 100%;
-  background: #fff;
+  background: #00a99d;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -992,7 +992,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 5px;
 }
 
 .footer-logo {
@@ -1001,32 +1000,54 @@ body {
   width: 190px;
 }
 
-.footer-link {
-  display: inline-block;
-  background-color: #f7931e;
+.footer-copyright {
+  font-family: 'Futura-Medium', sans-serif;
+  color: #fff;
+}
+
+.footer-scroll {
+  height: 50px;
+  width: 190px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-scroll__bg {
+  height: 50px;
+  width: 50px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+
+.footer-scroll__link {
+  background-color: #00a99d;
+  cursor: pointer;
   height: 40px;
   width: 40px;
+  -webkit-mask: url("../img/scroll-top.svg") no-repeat center center;
+          mask: url("../img/scroll-top.svg") no-repeat center center;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 
-.footer-link:hover {
-  background-color: #00a99d;
-}
-
-.footer-link__facebook {
-  -webkit-mask: url("../img/facebook-icon.svg") no-repeat center center;
-          mask: url("../img/facebook-icon.svg") no-repeat center center;
-}
-
-.footer-link__instagram {
-  -webkit-mask: url("../img/instagram-icon.svg") no-repeat center center;
-          mask: url("../img/instagram-icon.svg") no-repeat center center;
-}
-
-.footer-link__phone {
-  -webkit-mask: url("../img/phone-icon.svg") no-repeat center center;
-          mask: url("../img/phone-icon.svg") no-repeat center center;
+.footer-scroll__link:hover {
+  background-color: #f7931e;
 }
 
 @media (max-width: 1300px) {

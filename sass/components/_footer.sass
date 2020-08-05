@@ -2,9 +2,9 @@
   display: flex
   align-items: center
   justify-content: center
-  height: 180px
+  height: 80px
   width: 100%
-  background: #fff
+  background: $primary
   transition: all 0.3s
   .container
     height: 60px
@@ -13,22 +13,33 @@
     display: flex
     justify-content: space-between
     align-items: center
-    padding-top: 5px
   &-logo
     background: url('../img/logo.svg') no-repeat center center
     height: 40px 
     width: 190px
-  &-link
-    display: inline-block
-    background-color: $secondary
-    height: 40px 
-    width: 40px
-    transition: background-color 0.3s
-    &:hover
+  &-copyright
+    +norm
+    color: #fff
+  &-scroll
+    height: 50px
+    width: 190px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    &__bg
+      height: 50px
+      width: 50px
+      background: #fff
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 50%
+    &__link
       background-color: $primary
-    &__facebook
-      mask: url('../img/facebook-icon.svg') no-repeat center center
-    &__instagram
-      mask: url('../img/instagram-icon.svg') no-repeat center center
-    &__phone
-      mask: url('../img/phone-icon.svg') no-repeat center center
+      cursor: pointer
+      height: 40px
+      width: 40px
+      mask: url('../img/scroll-top.svg') no-repeat center center
+      transition: background-color 0.3s 
+      &:hover
+        background-color: $secondary

@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	document.body.addEventListener('click', event => {
     const target = event.target;
-    if (target.closest('.header-logo')) {
+    if (target.closest('.header-logo') || target.closest('.footer-scroll__link')) {
       scroll(target)
 		}
   });
