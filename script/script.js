@@ -73,7 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
         this.elements = {
             container: wrapper.querySelector('.teachers-slider__container'),
             track: wrapper.querySelector('.teachers-slider__track'),
-            items: wrapper.querySelectorAll('.teachers-slider__item')
+            items: wrapper.querySelectorAll('.teachers-slider__item'),
+            blocks: document.querySelectorAll('.teachers-slider__item')
         };
 
         this.buttons = {
@@ -81,10 +82,14 @@ document.addEventListener('DOMContentLoaded', () => {
             next: document.querySelector('.btn-next'),
         };
 
-        const itemWidth = this.elements.container.clientWidth / config.slidesToShow
-        this.movePosition = config.slidesToScroll * itemWidth;
-        this.maxPosition = -(this.elements.items.length * itemWidth - config.slidesToShow * itemWidth);
-        this.elements.items.forEach((item) => item.style.minWidth = `${itemWidth}px`);
+
+        this.itemWidth = this.elements.container.clientWidth / config.slidesToShow
+        // this.customTrack(config.slidesToShow);
+        this.movePosition = config.slidesToScroll * this.itemWidth;
+        this.maxPosition = -(this.elements.items.length * this.itemWidth - config.slidesToShow * this.itemWidth);
+        this.elements.items.forEach((item) => item.style.minWidth = `${this.itemWidth}px`);
+        this.elements.blocks.forEach((item) => item.style.maxHeight = `${this.itemWidth}px`);
+        this.elements.track.style.maxWidth = this.itemWidth;
         this.buttons.prev.addEventListener('click', () => this.handlePrevClick());
         this.buttons.next.addEventListener('click', () => this.handleNextClick());
         this.checkBtns();
@@ -97,6 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         this.setPosition();
         this.checkBtns();
+    }
+
+    customTrack(slidesToShow) {
+      console.log(this.itemWidth);
+      this.elements.container.style.width = this.itemWidth * slidesToShow
     }
 
     handleNextClick() {
