@@ -40,7 +40,12 @@
         border: solid $primary
         display: inline-block
         transition: background-color, transform .7s
+        cursor: pointer
         &-active
+          background-color: $secondary
+          border: solid $secondary
+          transform: scale(1.2)
+        &:hover
           background-color: $secondary
           border: solid $secondary
           transform: scale(1.2)

@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
   });
 
-  //Slider
+  //SliderTeachers
   class Slider {
     elements;
     buttons;
@@ -158,11 +158,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  //Slider
+  //SliderReviews
 	const slider = () => {
     const slide = document.querySelectorAll('.reviews-slider__item'),
       dots = document.querySelector('.reviews-slider__dots'),
-      slider = document.querySelector('.reviews-slider__container');
+      slider = document.querySelector('.reviews-wrapper');
       
     for (let i = 0; i < slide.length; i++) {
       dots.insertAdjacentHTML('beforeend',
@@ -196,6 +196,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		const startSlide = (time = 5000) => {
 			interval = setInterval(autoPlaySlide, time);
+    };
+    
+    const stopSlide = () => {
+			clearInterval(interval);
 		};
 
 		slider.addEventListener('click', event => {
@@ -203,8 +207,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const target = event.target;
 
-      prevSlide(slide, currentSlide, 'portfolio-item-active');
+      if (!target.matches('.dot')) {
+				return;
+			}
+
+      prevSlide(slide, currentSlide, 'active-slide');
       prevSlide(dot, currentSlide, 'dot-active');
+
+      if (target.matches('.dot')) {
+				dot.forEach((elem, i) => {
+					if (elem === target) {
+						currentSlide = i;
+					}
+				});
+			}
 
 			if (currentSlide >= slide.length) {
 				currentSlide = 0;
@@ -212,16 +228,31 @@ document.addEventListener('DOMContentLoaded', () => {
 				currentSlide = slide.length - 1;
       }
       
-      nextSlide(slide, currentSlide, 'portfolio-item-active');
+      nextSlide(slide, currentSlide, 'active-slide');
       nextSlide(dot, currentSlide, 'dot-active');
 
-		});
+    });
+    
+    slider.addEventListener('mouseover', event => {
+      if (event.target.matches('.reviews-slider__img') ||
+      event.target.matches('.dot')) {
+        stopSlide();
+      }
+    });
+
+    slider.addEventListener('mouseout', event => {
+      if (event.target.matches('.reviews-slider__img') ||
+      event.target.matches('.dot')) {
+        startSlide();
+      }
+    });
 
 		startSlide();
 	}
 
   slider();
   
+  //Accordeon
   const accord = () => {
     const slidesInDown = document.querySelector('.questions-container'),
       slidesHead = slidesInDown.querySelectorAll('.questions-item__question'),

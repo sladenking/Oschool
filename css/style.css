@@ -804,9 +804,17 @@ body {
   transition: background-color, -webkit-transform .7s;
   transition: background-color, transform .7s;
   transition: background-color, transform .7s, -webkit-transform .7s;
+  cursor: pointer;
 }
 
 .reviews-slider__dots .dot-active {
+  background-color: #f7931e;
+  border: solid #f7931e;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.reviews-slider__dots .dot:hover {
   background-color: #f7931e;
   border: solid #f7931e;
   -webkit-transform: scale(1.2);
