@@ -11,9 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (pageYOffset > 50) {
       header.style.background = '#fff';
       header.style.height = '60px';
+      header.style.zIndex = '5';
     } else {
-      header.style.background = '';
-      header.style.height = '';
+      header.style.background = 'transparent';
+      header.style.height = '80px';
     }
   };
 
@@ -25,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let percent = windowScroll / windowHeight * 100;
     progress.style.width = percent + '%';
+    progress.style.zIndex = '5';
+    progress.style.background = '#f7831e';
   };
 
   window.addEventListener('scroll', () => {

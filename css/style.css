@@ -26,7 +26,7 @@ body {
   width: 0%;
   height: 5px;
   background: #f7931e;
-  z-index: 3;
+  z-index: 5;
 }
 
 @font-face {
