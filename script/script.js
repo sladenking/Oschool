@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.header'),
     main = document.querySelector('.main');
 
-  const scrollWindow = () => {
+  const scrollWindow = event => {
+    event.preventDefault();
     main.style.opacity = 1 + pageYOffset/(-700);
     if (pageYOffset > 50) {
       header.style.background = '#fff';
@@ -21,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   //ProgressBar
   const progress = document.querySelector('.progress');
 
-  const progressBar = () => {
+  const progressBar = event => {
+    event.preventDefault();
     let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
     let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let percent = windowScroll / windowHeight * 100;
