@@ -196,8 +196,28 @@ body {
 }
 
 .header-link__phone {
+  cursor: pointer;
   -webkit-mask: url("../img/phone-icon.svg") no-repeat center center;
           mask: url("../img/phone-icon.svg") no-repeat center center;
+}
+
+.header-tel {
+  font-family: 'Futura-Medium', sans-serif;
+  position: fixed;
+  top: 80px;
+  background: #f7931e;
+  padding: 15px;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 15px;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.header-tel span {
+  cursor: pointer;
+  margin-left: 15px;
 }
 
 .container {

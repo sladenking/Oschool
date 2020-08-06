@@ -36,4 +36,20 @@
     &__instagram
       mask: url('../img/instagram-icon.svg') no-repeat center center
     &__phone
+      cursor: pointer
       mask: url('../img/phone-icon.svg') no-repeat center center
+  &-tel
+    +norm
+    position: fixed
+    top: 80px
+    background: $secondary
+    padding: 15px
+    font-size: 15px
+    color: #fff
+    border-radius: 15px
+    transition: opacity 0.5s
+    opacity: 0
+    span 
+      cursor: pointer
+      margin-left: 15px
+      
