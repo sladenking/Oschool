@@ -43,15 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     header.style.zIndex = '5';
   }
   
-
-  
-  
-
-  
-
-  
-
-
 	//ScrollBtns
 	const scroll = elem => {
 		event.preventDefault();
