@@ -141,6 +141,13 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesToScroll: 1
   });
 
+  if (window.innerWidth < 1025) {
+    new Slider(document.querySelector('.teachers-slider'), {
+      slidesToShow: 2,
+      slidesToScroll: 1
+    });
+  }
+
   //Slider
 	const slider = () => {
     const slide = document.querySelectorAll('.reviews-slider__item'),

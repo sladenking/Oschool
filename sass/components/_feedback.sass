@@ -2,15 +2,14 @@
   display: flex
   align-items: center
   justify-content: center
-  height: 100vh
+  height: auto
   min-height: 100vh
   width: 100%
   +norm
   background: url('../img/feedback-bg.jpg')
   background-size: cover
   &-wrapper
-    margin-top: 60px
-    height: 90vh
+    height: auto
     display: flex
     flex-direction: column
     align-items: center
@@ -73,11 +72,13 @@
         background-color: $primary
 
 .inputs
+  display: block
+  width: 100%
   margin-top: 10px
   border-radius: 5px
   border: 2px solid #000
   outline: none
   +norm
-  font-size: 15px
+  font-size: 20px
   &:focus
     border: 2px solid $primary

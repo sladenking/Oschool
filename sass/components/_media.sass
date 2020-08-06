@@ -1,7 +1,109 @@
 @media (max-width: 1300px)
   .container
     max-width: 1000px
+  .main-logo
+    width: 350px 
+  .types-item
+    flex-direction: column
+    &__subtitle
+      margin-top: 30px
   .reviews-slider
     height: 500px
     &__img
-      height: 500px
+      height: 450px
+
+@media (max-width: 1100px)
+  .container
+    max-width: 900px
+  .main
+    &-title
+      font-size: 40px
+    &-logo
+      width: 300px 
+  .about-img
+    background-size: 90%
+  .stages
+    align-items: flex-start
+    &-subtitle
+      font-size: 25px
+  .subjects
+    &-item
+      flex-basis: 50%
+  .types-item__subtitle
+    font-size: 20px
+
+@media (max-width: 1025px)
+  .container
+    max-width: 800px
+  .main
+    &-logo
+      width: 600px
+    &-title
+      font-size: 60px
+  .about
+    &-wrapper
+      flex-direction: column
+    &-text
+      flex-basis: 30%
+    &-img
+      flex-basis: 70%
+  .stages
+    align-items: center
+    min-height: 0
+    &-wrapper
+      padding-bottom: 25px
+    &-list
+      flex-direction: column
+      &__item
+        height: auto
+      &-left
+        flex-basis: 50%
+      &-right
+        flex-basis: 50%
+  .subjects
+    min-height: 0
+    &-wrapper
+      padding-bottom: 25px
+    &-item
+      font-size: 25px
+    &-text
+      font-size: 25px
+  .types
+    min-height: 0
+    &-item__subtitle
+      font-size: 25px
+  .teachers-wrapper
+    padding-bottom: 30px
+  .reviews
+    min-height: 0
+    &-wrapper
+      padding-bottom: 25px
+    &-slider
+      height: 800px
+      &__img
+        height: 750px
+  .questions
+    min-height: 0
+    &-wrapper
+      padding-bottom: 25px
+  .feedback
+    min-height: 0
+    &-wrapper
+      padding-bottom: 40px
+    &-form
+      width: 500px
+      height: 600px
+      &__container
+        width: 90%
+        height: 90%
+      &__header
+        flex-direction: column
+      &__head
+        width: 100%
+        font-size: 25px
+  .inputs
+    font-size: 20px
+
+@media (max-width: 900px)
+  .container
+    max-width: 90%
