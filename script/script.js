@@ -4,43 +4,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //ScrollWindow
   const header = document.querySelector('.header'),
-    main = document.querySelector('.main');
+    main = document.querySelector('.main'),
+    progress = document.querySelector('.progress');
 
-  const scrollWindow = event => {
-    event.preventDefault();
-    main.style.opacity = 1 + pageYOffset/(-700);
-    if (pageYOffset > 50) {
-      header.style.background = '#fff';
-      header.style.height = '60px';
-      header.style.zIndex = '5';
-    } else {
-      header.style.background = 'transparent';
-      header.style.height = '80px';
-    }
-  };
+  if (window.innerWidth > 1025) {
 
-  //ProgressBar
-  const progress = document.querySelector('.progress');
+    //ScrollWindow
+    const scrollWindow = () => {
+      main.style.opacity = 1 + pageYOffset/(-700);
+      if (pageYOffset > 50) {
+        header.style.background = '#fff';
+        header.style.height = '60px';
+        header.style.zIndex = '5';
+      } else {
+        header.style.background = 'transparent';
+        header.style.height = '80px';
+      }
+    };
 
-  const progressBar = event => {
-    event.preventDefault();
-    let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let percent = windowScroll / windowHeight * 100;
-    progress.style.width = percent + '%';
-    progress.style.zIndex = '5';
-    progress.style.background = '#f7831e';
-  };
+    //ProgressBar
+    const progressBar = () => {
+      let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let percent = windowScroll / windowHeight * 100;
+      progress.style.width = percent + '%';
+      progress.style.zIndex = '5';
+      progress.style.background = '#f7831e';
+    };
 
-  window.addEventListener('scroll', () => {
-    scrollWindow();
-    progressBar();
-  });
+    window.addEventListener('scroll', () => {
+      scrollWindow();
+      progressBar();
+    });
 
-  window.addEventListener('touchmove', () => {
-    scrollWindow();
-    progressBar();
-  });
+  } else {
+    header.style.background = '#fff';
+    header.style.height = '60px';
+    header.style.zIndex = '5';
+  }
+  
+
+  
+  
+
+  
+
+  
 
 
 	//ScrollBtns
@@ -146,10 +155,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  new Slider(document.querySelector('.teachers-slider'), {
-    slidesToShow: 3,
-    slidesToScroll: 1
-  });
+  if (window.innerWidth > 1025) {
+    new Slider(document.querySelector('.teachers-slider'), {
+      slidesToShow: 3,
+      slidesToScroll: 1
+    });
+  }
 
   if (window.innerWidth < 1025) {
     new Slider(document.querySelector('.teachers-slider'), {
