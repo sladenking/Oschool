@@ -309,13 +309,19 @@ document.addEventListener('DOMContentLoaded', () => {
     tel.style.opacity = '1';
   };
 
-  btn.addEventListener('click', () => {
-    showPhone();
-  });
+  if (window.innerWidth > 1025) {
+    btn.addEventListener('click', () => {
+      showPhone();
+    });
+  
+    close.addEventListener('click', () => {
+      tel.style.opacity = '0';
+    });
+  } else {
+    btn.setAttribute('href', "tel:+380983536684" )
+  }
 
-  close.addEventListener('click', () => {
-    tel.style.opacity = '0';
-  })
+  
 
   
 });
