@@ -607,6 +607,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 30px;
 }
 
 .teachers-header {
@@ -1245,10 +1246,13 @@ body {
     max-width: 800px;
   }
   .main-logo {
-    width: 600px;
+    width: 300px;
   }
   .main-title {
     font-size: 60px;
+  }
+  .about {
+    background-size: 30px;
   }
   .about-wrapper {
     -webkit-box-orient: vertical;
@@ -1263,6 +1267,7 @@ body {
   .about-img {
     -ms-flex-preferred-size: 70%;
         flex-basis: 70%;
+    height: 90%;
   }
   .stages {
     -webkit-box-align: center;
@@ -1291,6 +1296,7 @@ body {
         flex-basis: 50%;
   }
   .subjects {
+    background-size: 30px;
     min-height: 0;
   }
   .subjects-wrapper {
@@ -1308,8 +1314,8 @@ body {
   .types-item__subtitle {
     font-size: 25px;
   }
-  .teachers-wrapper {
-    padding-bottom: 30px;
+  .teachers {
+    background-size: 30px;
   }
   .reviews {
     min-height: 0;
@@ -1324,6 +1330,7 @@ body {
     height: 750px;
   }
   .questions {
+    background-size: 30px;
     min-height: 0;
   }
   .questions-wrapper {
