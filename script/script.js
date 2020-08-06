@@ -147,6 +147,12 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesToScroll: 1
     });
   }
+  if (window.innerWidth < 700) {
+    new Slider(document.querySelector('.teachers-slider'), {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  }
 
   //Slider
 	const slider = () => {

@@ -140,6 +140,8 @@ body {
   width: 100%;
   position: fixed;
   z-index: 5;
+  top: 0;
+  left: 0;
   background: transparent;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -285,6 +287,7 @@ body {
 }
 
 .about-wrapper {
+  padding-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,9 +322,19 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  background: url("../img/info-about.png") no-repeat center center;
+}
+
+.about-img img {
+  width: 90%;
+  height: auto;
 }
 
 .stages {
@@ -464,6 +477,7 @@ body {
   font-size: 20px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  margin-bottom: 60px;
 }
 
 .subjects-item:hover {
@@ -475,19 +489,16 @@ body {
 .subjects-item__england {
   background: url("../img/subjects/england.svg") no-repeat top center;
   background-size: auto 70%;
-  margin-bottom: 60px;
 }
 
 .subjects-item__ukraine {
   background: url("../img/subjects/ukraine.svg") no-repeat top center;
   background-size: auto 70%;
-  margin-bottom: 60px;
 }
 
 .subjects-item__chemistry {
   background: url("../img/subjects/chemistry.svg") no-repeat top center;
   background-size: auto 70%;
-  margin-bottom: 60px;
 }
 
 .subjects-item__physics {
@@ -1107,7 +1118,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 80px;
+  height: 100px;
   width: 100%;
   background: #00a99d;
   -webkit-transition: all 0.3s;
@@ -1115,11 +1126,24 @@ body {
 }
 
 .footer .container {
-  height: 60px;
+  height: 80px;
 }
 
 .footer-wrapper {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1140,25 +1164,12 @@ body {
 .footer-copyright {
   font-family: 'Futura-Medium', sans-serif;
   color: #fff;
-}
-
-.footer-scroll {
-  height: 50px;
-  width: 190px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-top: 15px;
 }
 
 .footer-scroll__bg {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1175,8 +1186,8 @@ body {
 .footer-scroll__link {
   background-color: #00a99d;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   -webkit-mask: url("../img/scroll-top.svg") no-repeat center center;
           mask: url("../img/scroll-top.svg") no-repeat center center;
   -webkit-transition: background-color 0.3s;
@@ -1221,9 +1232,6 @@ body {
   .main-logo {
     width: 300px;
   }
-  .about-img {
-    background-size: 90%;
-  }
   .stages {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -1245,11 +1253,8 @@ body {
   .container {
     max-width: 800px;
   }
-  .main-logo {
-    width: 300px;
-  }
   .main-title {
-    font-size: 60px;
+    font-size: 40px;
   }
   .about {
     background-size: 30px;
@@ -1259,6 +1264,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-bottom: 50px;
   }
   .about-text {
     -ms-flex-preferred-size: 30%;
@@ -1267,7 +1273,6 @@ body {
   .about-img {
     -ms-flex-preferred-size: 70%;
         flex-basis: 70%;
-    height: 90%;
   }
   .stages {
     -webkit-box-align: center;
@@ -1310,6 +1315,7 @@ body {
   }
   .types {
     min-height: 0;
+    padding-bottom: 25px;
   }
   .types-item__subtitle {
     font-size: 25px;
@@ -1344,7 +1350,7 @@ body {
   }
   .feedback-form {
     width: 500px;
-    height: 600px;
+    height: 650px;
   }
   .feedback-form__container {
     width: 90%;
@@ -1356,9 +1362,13 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .feedback-form__message {
+    font-size: 25px;
+  }
   .feedback-form__head {
     width: 100%;
     font-size: 25px;
+    margin-bottom: 15px;
   }
   .inputs {
     font-size: 20px;
@@ -1368,6 +1378,94 @@ body {
 @media (max-width: 900px) {
   .container {
     max-width: 90%;
+  }
+  .main {
+    background: url("../img/left-bg.png") no-repeat left -450px top -20px fixed, url("../img/right-bg.png") no-repeat right -450px top -20px fixed, url(../img/main-bg.jpg) no-repeat top center fixed;
+  }
+}
+
+@media (max-width: 600px) {
+  .feedback-form {
+    width: 100%;
+    height: 650px;
+  }
+  .about-wrapper {
+    height: auto;
+  }
+  .about-img {
+    height: 300px;
+  }
+  .about, .subjects, .teachers, .questions {
+    background-size: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-logo {
+    background: url("../img/logo-phone.svg") no-repeat center left;
+    width: 50px;
+  }
+  .main-title {
+    font-size: 30px;
+  }
+  .reviews-slider {
+    height: 600px;
+  }
+  .reviews-slider__img {
+    height: 550px;
+  }
+  .subjects-item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .subjects-item:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+  .types-item {
+    padding-bottom: 30px;
+  }
+  .types-item__title {
+    padding-left: 0;
+    padding-top: 60px;
+  }
+  .about-title, .stages-title, .subjects-title, .types-title, .teachers-title, .reviews-title, .questions-title, .feedback-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-logo {
+    width: 60%;
+  }
+  .main-title {
+    font-size: 25px;
+  }
+  .main-scroll__text {
+    font-size: 15px;
+  }
+  .teachers-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .btn {
+    margin-bottom: 20px;
+  }
+  .btn-prev {
+    margin-left: 0;
+  }
+  .reviews-slider {
+    height: 500px;
+  }
+  .reviews-slider__img {
+    height: 450px;
+  }
+  .footer-copyright {
+    font-size: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
