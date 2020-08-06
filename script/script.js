@@ -35,6 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
     progressBar();
   });
 
+  window.addEventListener('touchmove', () => {
+    scrollWindow();
+    progressBar();
+  });
+
 
 	//ScrollBtns
 	const scroll = elem => {
