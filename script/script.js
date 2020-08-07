@@ -1,6 +1,4 @@
-'use strict'
-
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
 
   //ScrollWindow
   const header = document.querySelector('.header'),
@@ -321,7 +319,4 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.setAttribute('href', "tel:+380983536684" )
   }
 
-  
-
-  
 });
