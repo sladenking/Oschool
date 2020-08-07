@@ -753,15 +753,6 @@ body {
 
 .teachers-slider__item div {
   text-align: right;
-  -webkit-transform: translateY(300%);
-          transform: translateY(300%);
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
-}
-
-.teachers-slider__item:hover div {
   -webkit-transform: translateY(-150%);
           transform: translateY(-150%);
 }
