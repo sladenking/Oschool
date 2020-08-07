@@ -564,6 +564,7 @@ body {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   margin-bottom: 60px;
+  text-align: center;
 }
 
 .subjects-item:hover {
@@ -1024,14 +1025,27 @@ body {
   padding: 0 10px;
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height .5s ease-out;
-  transition: max-height .5s ease-out;
+  opacity: 1;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  padding-left: 20px;
+}
+
+.questions-item__answer ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.questions-item__answer ul span {
+  display: block;
+  color: #000;
 }
 
 .active-answer {
+  opacity: 1;
   max-height: 500px;
-  -webkit-transition: max-height .5s ease-in;
-  transition: max-height .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
 }
 
 .active-question {
@@ -1313,7 +1327,10 @@ body {
     font-size: 40px;
   }
   .main-logo {
-    width: 300px;
+    width: 500px;
+  }
+  .main-line {
+    width: 500px;
   }
   .stages {
     -webkit-box-align: start;
@@ -1323,9 +1340,15 @@ body {
   .stages-subtitle {
     font-size: 25px;
   }
+  .stages-list__item {
+    font-size: 20px;
+  }
   .subjects-item {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+  }
+  .subjects-text__list {
+    font-size: 20px;
   }
   .types-item__subtitle {
     font-size: 20px;
@@ -1400,9 +1423,6 @@ body {
     min-height: 0;
     padding-bottom: 25px;
   }
-  .types-item__subtitle {
-    font-size: 25px;
-  }
   .teachers {
     background-size: 30px;
   }
@@ -1471,6 +1491,18 @@ body {
 }
 
 @media (max-width: 600px) {
+  .main-title {
+    font-size: 30px;
+  }
+  .main-subtitle {
+    font-size: 20px;
+  }
+  .main-logo {
+    width: 400px;
+  }
+  .main-line {
+    width: 400px;
+  }
   .feedback-form {
     width: 100%;
     height: 650px;
@@ -1492,7 +1524,19 @@ body {
     width: 50px;
   }
   .main-title {
-    font-size: 30px;
+    font-size: 25px;
+  }
+  .main-subtitle {
+    font-size: 15px;
+  }
+  .main-logo {
+    width: 300px;
+  }
+  .main-line {
+    width: 300px;
+  }
+  .main-scroll__text {
+    font-size: 15px;
   }
   .reviews-slider {
     height: 600px;
@@ -1510,27 +1554,38 @@ body {
   .types-item {
     padding-bottom: 30px;
   }
+  .types-item__subtitle {
+    margin-top: 20px;
+  }
   .types-item__title {
     padding-left: 0;
     padding-top: 60px;
   }
-  .about-title, .stages-title, .subjects-title, .types-title, .teachers-title, .reviews-title, .questions-title, .feedback-title, .types-item__title, .questions-item__question {
+  .about-title, .stages-title, .subjects-title, .types-title, .teachers-title, .reviews-title, .questions-title, .feedback-title, .types-item__title, .questions-item__question, .subjects-subtitle {
     font-size: 25px;
+  }
+  .subjects-text {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .about-subtitle, .stages-subtitle, .stages-list__item, .subjects-item, .subjects-text, .types-item__subtitle {
     font-size: 20px;
+  }
+  .reviews-slider__dots .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 3px;
   }
 }
 
 @media (max-width: 400px) {
   .main-logo {
-    width: 60%;
+    width: 250px;
   }
-  .main-title {
-    font-size: 25px;
-  }
-  .main-scroll__text {
-    font-size: 15px;
+  .main-line {
+    width: 250px;
+    height: 2px;
   }
   .teachers-header {
     -webkit-box-orient: vertical;

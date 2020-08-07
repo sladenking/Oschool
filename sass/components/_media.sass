@@ -19,14 +19,20 @@
     &-title
       font-size: 40px
     &-logo
-      width: 300px 
+      width: 500px 
+    &-line
+      width: 500px
   .stages
     align-items: flex-start
     &-subtitle
       font-size: 25px
+    &-list__item
+      font-size: 20px
   .subjects
     &-item
       flex-basis: 50%
+    &-text__list
+      font-size: 20px
   .types-item__subtitle
     font-size: 20px
 
@@ -70,8 +76,6 @@
   .types
     min-height: 0
     padding-bottom: 25px
-    &-item__subtitle
-      font-size: 25px
   .teachers
     background-size: 30px
   .reviews
@@ -117,6 +121,15 @@
     background: url('../img/left-bg.png') no-repeat left -450px top -20px fixed, url('../img/right-bg.png') no-repeat right -450px top -20px fixed, url(../img/main-bg.jpg) no-repeat top center fixed
 
 @media (max-width: 600px)
+  .main
+    &-title
+      font-size: 30px
+    &-subtitle
+      font-size: 20px
+    &-logo
+      width: 400px
+    &-line
+      width: 400px
   .feedback-form
     width: 100%
     height: 650px
@@ -125,7 +138,6 @@
       height: auto
     &-img
       height: 300px
-
   .about, .subjects, .teachers, .questions
     background-size: 15px
 
@@ -134,8 +146,17 @@
     &-logo
       background: url('../img/logo-phone.svg') no-repeat center left
       width: 50px
-  .main-title
-    font-size: 30px
+  .main
+    &-title
+      font-size: 25px
+    &-subtitle
+      font-size: 15px
+    &-logo
+      width: 300px
+    &-line
+      width: 300px
+    &-scroll__text
+      font-size: 15px
   .reviews
     &-slider
       height: 600px
@@ -147,22 +168,29 @@
       margin-bottom: 0
   .types-item
     padding-bottom: 30px
+    &__subtitle
+      margin-top: 20px
     &__title
       padding-left: 0
       padding-top: 60px
-  .about-title, .stages-title, .subjects-title, .types-title, .teachers-title, .reviews-title, .questions-title, .feedback-title, .types-item__title, .questions-item__question
+  .about-title, .stages-title, .subjects-title, .types-title, .teachers-title, .reviews-title, .questions-title, .feedback-title, .types-item__title, .questions-item__question, .subjects-subtitle
     font-size: 25px
+  .subjects-text
+    align-items: flex-start
   .about-subtitle, .stages-subtitle, .stages-list__item, .subjects-item, .subjects-text, .types-item__subtitle
     font-size: 20px
+  .reviews-slider__dots .dot
+    height: 10px
+    width: 10px
+    margin: 0 3px
 
 @media (max-width: 400px)
   .main
     &-logo
-      width: 60%
-    &-title
-      font-size: 25px
-    &-scroll__text
-      font-size: 15px
+      width: 250px
+    &-line
+      width: 250px
+      height: 2px
   .teachers-header
     flex-direction: column
     align-items: flex-start
