@@ -1,9 +1,4 @@
 class Slider {
-  elements;
-  buttons;
-  position = 0;
-  movePosition;
-  maxPosition;
 
   constructor(wrapper, config) {
       this.elements = {
@@ -67,7 +62,6 @@ class Slider {
 };
 
 const sliderTeachers = () => {
-  
   if (window.innerWidth > 1025) {
     new Slider(document.querySelector('.teachers-slider'), {
       slidesToShow: 3,
