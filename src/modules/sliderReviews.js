@@ -5,10 +5,10 @@ const sliderReviews = () => {
     
   for (let i = 0; i < slide.length; i++) {
     dots.insertAdjacentHTML('beforeend',
-      `<li class="dot ${i === 0 ? 'dot-active' : ''}"></li>`);
+      `<li class="dot-reviews ${i === 0 ? 'dot-reviews-active' : ''}"></li>`);
   }
 
-  const dot = document.querySelectorAll('.dot');
+  const dot = document.querySelectorAll('.dot-reviews');
 
   let currentSlide = 0, interval;
 
@@ -22,14 +22,14 @@ const sliderReviews = () => {
   
   const autoPlaySlide = () => {
 
-    prevSlide(slide, currentSlide, 'active-slide');
-    prevSlide(dot, currentSlide, 'dot-active');
+    prevSlide(slide, currentSlide, 'reviews-active-slide');
+    prevSlide(dot, currentSlide, 'dot-reviews-active');
     currentSlide++;
     if (currentSlide >= slide.length) {
       currentSlide = 0;
     }
-    nextSlide(slide, currentSlide, 'active-slide');
-    nextSlide(dot, currentSlide, 'dot-active');
+    nextSlide(slide, currentSlide, 'reviews-active-slide');
+    nextSlide(dot, currentSlide, 'dot-reviews-active');
 
   };
 
@@ -46,14 +46,14 @@ const sliderReviews = () => {
 
     const target = event.target;
 
-    if (!target.matches('.dot')) {
+    if (!target.matches('.dot-reviews')) {
       return;
     }
 
-    prevSlide(slide, currentSlide, 'active-slide');
-    prevSlide(dot, currentSlide, 'dot-active');
+    prevSlide(slide, currentSlide, 'reviews-active-slide');
+    prevSlide(dot, currentSlide, 'dot-reviews-active');
 
-    if (target.matches('.dot')) {
+    if (target.matches('.dot-reviews')) {
       dot.forEach((elem, i) => {
         if (elem === target) {
           currentSlide = i;
@@ -67,21 +67,21 @@ const sliderReviews = () => {
       currentSlide = slide.length - 1;
     }
     
-    nextSlide(slide, currentSlide, 'active-slide');
-    nextSlide(dot, currentSlide, 'dot-active');
+    nextSlide(slide, currentSlide, 'reviews-active-slide');
+    nextSlide(dot, currentSlide, 'dot-reviews-active');
 
   });
   
   slider.addEventListener('mouseover', event => {
     if (event.target.matches('.reviews-slider__img') ||
-    event.target.matches('.dot')) {
+    event.target.matches('.dot-reviews')) {
       stopSlide();
     }
   });
 
   slider.addEventListener('mouseout', event => {
     if (event.target.matches('.reviews-slider__img') ||
-    event.target.matches('.dot')) {
+    event.target.matches('.dot-reviews')) {
       startSlide();
     }
   });
