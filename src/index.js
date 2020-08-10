@@ -14,4 +14,5 @@ progressBar();
 scrollButtons();
 sliderTeachers();
 sliderReviews();
+accord();
 modalPhone();

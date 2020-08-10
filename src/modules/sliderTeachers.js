@@ -83,4 +83,4 @@ const sliderTeachers = () => {
   }
 };
 
-export { Slider, sliderTeachers };
+export default sliderTeachers;
