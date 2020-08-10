@@ -1,7 +1,8 @@
 //ScrollWindow
 const scrollWindow = () => {
   const header = document.querySelector('.header'),
-    main = document.querySelector('.main');
+    main = document.querySelector('.main'),
+    reviews = document.querySelector('.reviews');
 
   const scroll = () => {
     main.style.opacity = 1 + pageYOffset/(-700);

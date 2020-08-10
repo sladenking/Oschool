@@ -22,7 +22,7 @@ const scrollButtons = () => {
   document.body.addEventListener('click', event => {
     const target = event.target;
     if (target.closest('.header-logo') || target.closest('.footer-scroll__link')) {
-      scroll(target)
+      scroll(target);
     }
   });
 };

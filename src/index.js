@@ -1,3 +1,11 @@
+'use scrict';
+
+import '@babel/polyfill';
+import 'nodelist-foreach-polyfill';
+import elementClosest from 'element-closest';
+elementClosest(window);
+import 'element-matches';
+
 import scrollWindow from './modules/scrollWindow';
 import preloader from './modules/preloader';
 import progressBar from './modules/progressBar';
