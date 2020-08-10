@@ -1,10 +1,10 @@
 
 
 //ScrollWindow
-const header = document.querySelector('.header'),
-  main = document.querySelector('.main');
-
 const scrollWindow = () => {
+  const header = document.querySelector('.header'),
+    main = document.querySelector('.main');
+
   main.style.opacity = 1 + pageYOffset/(-700);
   if (pageYOffset > 50) {
     header.style.background = '#fff';
@@ -17,9 +17,9 @@ const scrollWindow = () => {
 };
 
 //ProgressBar
-const progress = document.querySelector('.progress');
-
 const progressBar = () => {
+  const progress = document.querySelector('.progress');
+
   let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
   let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   let percent = windowScroll / windowHeight * 100;
@@ -30,6 +30,9 @@ const progressBar = () => {
 
 window.addEventListener('scroll', () => {
   scrollWindow();
+});
+
+window.addEventListener('scroll', () => {
   progressBar();
 });
 
@@ -317,4 +320,4 @@ if (window.innerWidth > 1025) {
   });
 } else {
   btn.setAttribute('href', "tel:+380983536684");
-}
+};
