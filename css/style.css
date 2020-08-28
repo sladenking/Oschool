@@ -278,6 +278,13 @@ body {
   font-family: 'Futura-Medium', sans-serif;
 }
 
+.main-text {
+  color: #f7931e;
+  font-weight: normal;
+  font-size: 20px;
+  font-family: 'Futura-Medium', sans-serif;
+}
+
 .main-line {
   height: 4px;
   width: 600px;
@@ -298,7 +305,7 @@ body {
 
 .main-scroll__text {
   font-family: 'Futura-Medium', sans-serif;
-  padding-top: 160px;
+  padding-top: 50px;
   font-size: 20px;
 }
 
@@ -428,17 +435,17 @@ body {
 }
 
 .stages-list__left {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
 }
 
 .stages-list__right {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
 }
 
 .stages-list__item {
-  height: 100px;
+  height: 150px;
   font-size: 25px;
   font-weight: normal;
 }
@@ -547,8 +554,8 @@ body {
 }
 
 .subjects-item {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
   height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -565,6 +572,7 @@ body {
   transition: all 0.5s;
   margin-bottom: 60px;
   text-align: center;
+  cursor: pointer;
 }
 
 .subjects-item:hover {
@@ -574,12 +582,12 @@ body {
 }
 
 .subjects-item__england {
-  background: url("../img/subjects/england.svg") no-repeat top center;
+  background: url("../img/subjects/england.png") no-repeat top center;
   background-size: auto 70%;
 }
 
 .subjects-item__ukraine {
-  background: url("../img/subjects/ukraine.svg") no-repeat top center;
+  background: url("../img/subjects/ukraine.png") no-repeat top center;
   background-size: auto 70%;
 }
 
@@ -1054,6 +1062,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 50px;
 }
 
 .feedback-title {
@@ -1185,7 +1194,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100px;
+  height: 140px;
   width: 100%;
   background: #00a99d;
   -webkit-transition: all 0.3s;
@@ -1193,7 +1202,7 @@ body {
 }
 
 .footer .container {
-  height: 80px;
+  height: 100%;
 }
 
 .footer-wrapper {
@@ -1265,7 +1274,7 @@ body {
   background-color: #f7931e;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1370px) {
   .container {
     max-width: 1000px;
   }
