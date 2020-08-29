@@ -421,6 +421,7 @@ body {
 }
 
 .stages-subtitle {
+  padding-top: 30px;
   font-size: 30px;
   color: #f7931e;
 }
@@ -445,7 +446,7 @@ body {
 }
 
 .stages-list__item {
-  height: 150px;
+  height: 100px;
   font-size: 25px;
   font-weight: normal;
 }
