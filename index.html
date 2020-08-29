@@ -186,53 +186,31 @@
   <section class="teachers">
     <div class="container">
       <div class="teachers-wrapper">
-        <div class="teachers-header">
-          <h1 class="teachers-title">Наши преподаватели</h1>
-          <div class="teachers-slider__btns">
-            <a class="btn btn-prev"></a>
-            <a class="btn btn-next"></a>
+        <h1 class="teachers-title">Наши преподаватели</h1>
+        <div class="teachers-list">
+          <div class="teachers-item">
+            <img src="./img/teachers/yaroslava-img.jpg" alt="yaroslava-img" class="teachers-img">
+            <button class="teachers-btn">Записаться на урок к Ярославе</button>
           </div>
-        </div>
-        <div class="teachers-slider">
-          <div class="teachers-slider__container">
-            <div class="teachers-slider__track">
-              <div class="teachers-slider__item">
-                <img src="./img/teachers/yaroslava-img.jpg" alt="yaroslava-img" class="teachers-img">
-                <div class="teachers-info">
-                  <img src="./img/teachers/yaroslava-text.png" alt="yaroslava-text">
-                </div>
-              </div>
-              <div class="teachers-slider__item">
-                <img src="./img/teachers/irina-img.jpg" alt="irina-img" class="teachers-img">
-                <div class="teachers-info">
-                  <img src="./img/teachers/irina-text.png" alt="irina-text">
-                </div>
-              </div>
-              <div class="teachers-slider__item">
-                <img src="./img/teachers/daria-img.jpg" alt="daria-img" class="teachers-img">
-                <div class="teachers-info">
-                  <img src="./img/teachers/daria-text.png" alt="daria-text">
-                </div>
-              </div>
-              <div class="teachers-slider__item">
-                <img src="./img/teachers/alina-img.jpg" alt="alina-img" class="teachers-img">
-                <div class="teachers-info">
-                  <img src="./img/teachers/alina-text.png" alt="alina-text">
-                </div>
-              </div>
-              <div class="teachers-slider__item">
-                <img src="./img/teachers/irina-ukr-img.jpg" alt="irina-ukr-img" class="teachers-img">
-                <div class="teachers-info">
-                  <img src="./img/teachers/irina-ukr-text.png" alt="irina-ukr-text">
-                </div>
-              </div>
-              <div class="teachers-slider__item">
-                <img src="./img/teachers/diana-img.jpg" alt="diana-img" class="teachers-img">
-                <div class="teachers-info">
-                  <img src="./img/teachers/diana-text.png" alt="diana-text">
-                </div>
-              </div>
-            </div>
+          <div class="teachers-item">
+            <img src="./img/teachers/alina-img.jpg" alt="alina-img" class="teachers-img">
+            <button class="teachers-btn">Записаться на урок к Алине</button>
+          </div>
+          <div class="teachers-item">
+            <img src="./img/teachers/diana-img.jpg" alt="diana-img" class="teachers-img">
+            <button class="teachers-btn">Записаться на урок к Диане</button>
+          </div>
+          <div class="teachers-item">
+            <img src="./img/teachers/irina-img.jpg" alt="irina-img" class="teachers-img">
+            <button class="teachers-btn">Записаться на урок к Ирине</button>
+          </div>
+          <div class="teachers-item">
+            <img src="./img/teachers/daria-img.jpg" alt="daria-img" class="teachers-img">
+            <button class="teachers-btn">Записаться на урок к Дарье</button>
+          </div>
+          <div class="teachers-item">
+            <img src="./img/teachers/irina-ukr-img.jpg" alt="irina-ukr-img" class="teachers-img">
+            <button class="teachers-btn">Записаться на урок к Ирине</button>
           </div>
         </div>
       </div>
@@ -432,16 +410,50 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-wrapper">
-        <div class="footer-top">
+        <div class="footer-left">
           <div class="footer-logo"></div>
-          <div class="footer-scroll__bg">
-            <a href="#main" class="footer-scroll__link"></a>
-          </div>
+          <div class="footer-copyright">© 2019-2020 O!School. Все права защищены.</div>
         </div>
-        <div class="footer-copyright">© 2019-2020 O!School. Все права защищены.</div>
+        <div class="footer-scroll__bg">
+          <a href="#main" class="footer-scroll__link"></a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <div class="popup">
+    <div class="popup-content">
+      <form action="" class="popup-form">
+        <span class="popup-title">Запись на урок <span class="popup-subject"></span> к <span class="popup-teacher"></span></span>
+        <div class="popup-form__container">
+          <div class="popup-form__header">
+            <div class="popup-form__head">
+              <label for="uname"><b>Ваше имя</b></label>
+              <input type="text" name="uname" class="popup-form__input inputs" required>
+            </div>
+            <div class="popup-form__head">
+              <label for="phone"><b>Номер телефона</b></label>
+              <input type="tel" name="phone" class="popup-form__input inputs" required>
+            </div>   
+            <div class="popup-form__head">
+              <label for="phone"><b>Как с Вами связаться?</b></label>
+              <select type="tel" class="popup-form__select inputs">
+                <option>Тел. звонок</option>
+                <option>Viber</option>
+                <option>Telegram</option>
+                <option>WhatsApp</option>
+              </select>
+            </div>
+          </div>
+          <div class="popup-form__message">
+            <label for="text"><b>Ваше сообщение</b></label>
+            <textarea type="text" name="text" class="popup-form__textarea inputs" placeholder="Спросите, что именно вас интересует и мы отправим вам нужную информацию или напишите время, когда вы хотите чтобы мы с вами связались!"></textarea>
+          </div>
+          <button type="submit" class="popup-form__btn">Отправить сообщение</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script type="text/javascript" src="./dist/main.js"></script>
 </body>
