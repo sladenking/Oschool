@@ -373,7 +373,7 @@
     <div class="container">
       <div class="feedback-wrapper">
         <h1 class="feedback-title">Остались вопросы?</h1>
-        <form action="contact-form.php" class="feedback-form" id="contact_form_1">
+        <form action="contact-form.php" class="feedback-form" id="contact-form-feedback">
           <div class="feedback-form__container">
             <div class="feedback-form__header">
               <div class="feedback-form__head">
@@ -424,21 +424,23 @@
   <div class="popup">
     <div class="popup-content">
       <button class="popup-close">&times;</button>
-      <form action="" class="popup-form">
+      <form action="" class="popup-form" id="contact-form-modal">
         <span class="popup-title">Запись на урок <span class="popup-subject"></span> к <span class="popup-teacher"></span></span>
         <div class="popup-form__container">
           <div class="popup-form__header">
             <div class="popup-form__head">
-              <label for="uname"><b>Ваше имя</b></label>
-              <input type="text" name="uname" class="popup-form__input inputs" required>
+              <label for="uname-modal"><b>Ваше имя</b></label>
+              <input type="text" placeholder="Имя" name="uname-modal" class="popup-form__input inputs" required>
             </div>
             <div class="popup-form__head">
-              <label for="phone"><b>Номер телефона</b></label>
-              <input type="tel" name="phone" class="popup-form__input inputs" required>
+              <label for="yourphone-modal"><b>Номер телефона</b></label>
+              <input type="tel" name="yourphone-modal" placeholder="+38(000)-000-00-00" class="popup-form__input phone-input inputs" required>
             </div>   
+            <input type="text" class="popup-undisplay teacher-input">
+            <input type="text" class="popup-undisplay subject-input">
             <div class="popup-form__head">
-              <label for="phone"><b>Как с Вами связаться?</b></label>
-              <select type="tel" class="popup-form__select inputs">
+              <label for="howto-modal"><b>Как с Вами связаться?</b></label>
+              <select type="tel" name="howto-modal" class="popup-form__select inputs">
                 <option>Тел. звонок</option>
                 <option>Viber</option>
                 <option>Telegram</option>
@@ -447,8 +449,8 @@
             </div>
           </div>
           <div class="popup-form__message">
-            <label for="text"><b>Ваше сообщение</b></label>
-            <textarea type="text" name="text" class="popup-form__textarea inputs" placeholder="Спросите, что именно вас интересует и мы отправим вам нужную информацию или напишите время, когда вы хотите чтобы мы с вами связались!"></textarea>
+            <label for="yourtext"><b>Ваше сообщение</b></label>
+            <textarea type="text" name="yourtext-modal" class="popup-form__textarea inputs" placeholder="Спросите, что именно вас интересует и мы отправим вам нужную информацию или напишите время, когда вы хотите чтобы мы с вами связались!"></textarea>
           </div>
           <button type="submit" class="popup-form__btn">Отправить сообщение</button>
         </div>
@@ -479,7 +481,7 @@
 
   <script>
     $(document).ready(function () {
-      $('#contact_form_1').submit(function () {
+      $('#contact-form-feedback').submit(function () {
         var formID = $(this).attr('id'); // Получение ID формы
         var formNm = $('#' + formID);
         $.ajax({
@@ -489,11 +491,11 @@
           success: function (data) {
             // Вывод текста результата отправки в текущей форме
             setTimeout(function(){
-              $('#contact_form_1')[0].reset();
+              $('#contact-form-feedback')[0].reset();
               setTimeout(function(){
 
-                var id = 'contact_form_1';
-                var html = '<div id="contact_form_1">' +
+                var id = 'contact-form-feedback';
+                var html = '<div id="contact-form-feedback">' +
                         '<span style="text-align: center;">Спасибо! Мы свяжемся с вами в ближайшее время.</span>\n' + '</div>';
                 var obj=document.getElementById(id);
                 var o=document.createElement('div');
