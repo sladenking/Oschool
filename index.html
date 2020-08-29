@@ -373,30 +373,31 @@
     <div class="container">
       <div class="feedback-wrapper">
         <h1 class="feedback-title">Остались вопросы?</h1>
-        <form action="" class="feedback-form">
+        <form action="contact-form.php" class="feedback-form" id="contact_form_1">
           <div class="feedback-form__container">
             <div class="feedback-form__header">
               <div class="feedback-form__head">
                 <label for="uname"><b>Ваше имя</b></label>
-                <input type="text" name="uname" class="feedback-form__input inputs" required>
+                <input type="text" placeholder="Имя" name="uname" class="feedback-form__input inputs" required>
               </div>
               <div class="feedback-form__head">
                 <label for="phone"><b>Номер телефона</b></label>
-                <input type="tel" name="phone" class="feedback-form__input inputs" required>
-              </div>   
+                <input type="tel" name="yourphone" placeholder="+38(000)-000-00-00" class="feedback-form__input phone__input inputs" required>
+              </div>
               <div class="feedback-form__head">
                 <label for="phone"><b>Как с Вами связаться?</b></label>
-                <select type="tel" class="feedback-form__select inputs">
-                  <option>Тел. звонок</option>
-                  <option>Viber</option>
-                  <option>Telegram</option>
-                  <option>WhatsApp</option>
+                <select type="tel" name="howto" class="feedback-form__select inputs" required="required">
+                  <option value="Тел. звонок">Тел. звонок</option>
+                  <option value="Viber">Viber</option>
+                  <option value="Telegram">Telegram</option>
+                  <option value="WhatsApp">WhatsApp</option>
                 </select>
               </div>
             </div>
             <div class="feedback-form__message">
               <label for="text"><b>Ваше сообщение</b></label>
-              <textarea type="text" name="text" class="feedback-form__textarea inputs" placeholder="Спросите, что именно вас интересует и мы отправим вам нужную информацию или напишите время, когда вы хотите чтобы мы с вами связались!"></textarea>
+              <textarea type="text" name="yourtext" class="feedback-form__textarea inputs"
+                        placeholder="Спросите, что именно вас интересует и мы отправим вам нужную информацию или напишите время, когда вы хотите чтобы мы с вами связались!" required="required"></textarea>
             </div>
             <button type="submit" class="feedback-form__btn">Отправить сообщение</button>
           </div>
