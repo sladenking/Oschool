@@ -1,0 +1,85 @@
+.header-subject
+  background-color: #ffffff
+  height: 60px
+
+.english
+  display: flex
+  align-items: center
+  justify-content: center
+  height: auto
+  min-height: 100vh
+  width: 100%
+  padding-top: 80px
+  +norm
+  &-wrapper
+    height: auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  &-main
+    height: auto
+    width: 100%
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: flex-start
+    &__info
+      display: flex
+      width: 100%
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 20px
+  &-title
+    font-size: 30px
+    color: $secondary
+    margin-bottom: 20px
+  &-subtitle
+    font-size: 25px
+    color: $primary
+    font-weight: normal
+    margin-bottom: 0
+  &-form
+    flex-basis: 40%
+    width: 100%
+    height: 350px
+    background-color: #000
+  &-info
+    flex-basis: 55%
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+    padding-bottom: 15px
+    &__list
+      margin-top: 0
+      font-size: 20px
+      padding-left: 20px
+    &__article
+      color: $primary
+      list-style: none
+      margin-top: 10px
+      &::before
+        content: "\2022"
+        color: $secondary
+        font-weight: bold
+        display: inline-block
+        width: 1em
+        margin-left: -1em
+    &__subtitle
+      color: #000
+  &-teacher
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: flex-start
+    &__image
+      flex-basis: 40%
+    &__about
+      flex-basis: 55%
+      +norm
+      font-weight: normal
+      font-size: 20px
+    &__img
+      width: 400px
+      height: 400px
+    
