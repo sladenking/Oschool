@@ -11,6 +11,10 @@
     height: 500px
     &__img
       height: 450px
+  .revs-slider
+    height: 500px
+    &__img
+      height: 450px
 
 @media (max-width: 1100px)
   .container
@@ -80,6 +84,14 @@
   .teachers
     background-size: 30px
   .reviews
+    min-height: 0
+    &-wrapper
+      padding-bottom: 25px
+    &-slider
+      height: 800px
+      &__img
+        height: 750px
+  .revs
     min-height: 0
     &-wrapper
       padding-bottom: 25px
@@ -163,6 +175,11 @@
       height: 600px
       &__img
         height: 550px
+  .revs
+    &-slider
+      height: 600px
+      &__img
+        height: 550px
   .subjects-item
     flex-basis: 100%
     &:nth-last-child(1)
@@ -174,7 +191,7 @@
     &__title
       padding-left: 0
       padding-top: 60px
-  .about-title, .stages-title, .subjects-title, .types-title, .teachers-title, .reviews-title, .questions-title, .feedback-title, .types-item__title, .subjects-subtitle
+  .about-title, .stages-title, .subjects-title, .types-title, .teachers-title, .reviews-title, .questions-title, .feedback-title, .types-item__title, .subjects-subtitle, .revs-title
     font-size: 25px
   .questions-item__question
     font-size: 20px
@@ -183,6 +200,10 @@
   .about-subtitle, .stages-subtitle, .stages-list__item, .subjects-item, .subjects-text, .types-item__subtitle
     font-size: 20px
   .reviews-slider__dots .dot
+    height: 10px
+    width: 10px
+    margin: 0 3px
+  .revs-slider__dots .dot
     height: 10px
     width: 10px
     margin: 0 3px
@@ -202,6 +223,11 @@
     &-prev
       margin-left: 0
   .reviews
+    &-slider
+      height: 500px
+      &__img
+        height: 450px
+  .revs
     &-slider
       height: 500px
       &__img

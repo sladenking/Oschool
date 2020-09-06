@@ -24,12 +24,12 @@
     justify-content: center
     flex-direction: column
     align-items: flex-start
+    margin-bottom: 50px
     &__info
       display: flex
       width: 100%
       justify-content: space-between
-      align-items: center
-      margin-bottom: 20px
+      align-items: flex-start
   &-title
     font-size: 30px
     color: $secondary
@@ -38,18 +38,16 @@
     font-size: 25px
     color: $primary
     font-weight: normal
-    margin-bottom: 0
-  &-form
-    flex-basis: 40%
-    width: 100%
-    height: 350px
-    background-color: #000
+    margin: auto
   &-info
-    flex-basis: 55%
-    display: flex
-    align-items: flex-start
-    flex-direction: column
-    padding-bottom: 15px
+    &__left
+      flex-basis: 47%
+      display: flex
+      align-items: flex-start
+      flex-direction: column
+      text-align: left
+    &__right
+      flex-basis: 47%
     &__list
       margin-top: 0
       font-size: 20px
@@ -82,4 +80,159 @@
     &__img
       width: 400px
       height: 400px
-    
+    &__block2
+      display: none
+  &-toggle
+    display: block
+    width: 110px
+    padding-top: 10px
+    text-decoration: none
+    color: $primary
+
+.revs
+  display: flex
+  align-items: center
+  justify-content: center
+  height: auto
+  min-height: 100vh
+  width: 100%
+  +norm
+  &-wrapper
+    min-height: 100vh
+    height: auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  &-title
+    font-size: 25px
+    color: $primary
+    font-weight: normal
+  &-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-slider
+    width: 100%
+    height: 80vh
+    display: block
+    margin: 0 auto
+    position: relative
+    &__dots
+      width: 100%
+      padding: 0
+      display: flex
+      justify-content: center
+      z-index: 3
+      .dot-revs
+        height: 16px
+        width: 16px
+        margin: 0 5px
+        border-radius: 50%
+        border: solid $primary
+        display: inline-block
+        transition: background-color, transform .7s
+        cursor: pointer
+        &-active
+          background-color: $secondary
+          border: solid $secondary
+          transform: scale(1.2)
+        &:hover
+          background-color: $secondary
+          border: solid $secondary
+          transform: scale(1.2)
+    &__container
+      overflow: hidden
+      display: flex
+      justify-content: center
+      align-items: center
+    &__item
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 100%
+      opacity: 0
+      transition: opacity .7s
+    &__img
+      height: 600px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+  &-active-slide
+    opacity: 1
+
+.subs
+  &-undisplay
+    display: none
+  &-form
+    height: 100%
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    font-size: 20px
+    &__head
+      width: 100%
+      text-align: left
+      color: $primary
+      label b
+        font-weight: normal
+    &__container
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      width: 100%
+      padding: 10px 0
+    &__header
+      display: flex
+      flex-direction: column
+      width: 100%
+    &__message
+      display: flex
+      flex-direction: column
+      width: 100%
+      text-align: left
+      color: $primary
+      label b
+        font-weight: normal
+    &__input
+      width: 190px
+      height: 30px
+      padding: 0 10px
+    &__select
+      width: 190px
+      height: 30px
+      cursor: pointer
+      padding: 0 10px
+    &__textarea
+      height: 120px
+      padding: 10px
+    &__btn
+      padding: 10px 20px
+      font-size: 20px
+      border: 2px solid $primary
+      color: $primary
+      background-color: #fff
+      border-radius: 30px
+      transition: all 0.3s
+      cursor: pointer
+      +norm
+      &:hover
+        color: #ffffff
+        background-color: $primary
+
+.inputs
+  display: block
+  width: 100%
+  margin: 10px 0
+  border-radius: 5px
+  border: 2px solid #000
+  outline: none
+  +norm
+  font-size: 20px
+  &:focus
+    border: 2px solid $primary

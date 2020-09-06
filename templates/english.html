@@ -11,21 +11,13 @@
 </head>
 <body>
 
-  <div class="preloader">
-    <div class="preloader__row">
-      <div class="preloader__item"></div>
-      <div class="preloader__item"></div>
-    </div>
-  </div>
-  <!-- /.preloader -->
-
   <header class="header header-subject">
     <div class="progress">
     </div>
     <div class="container">
       <div class="header-wrapper">
-        <a href="" class="header-back">&#171; Вернуться на главную</a>
-        <a href="#main" class="header-logo"></a>
+        <a href="javascript:history.back()" class="header-back">&#171; Вернуться на главную</a>
+        <a href="../index.html" class="header-logo"></a>
         <div class="header-social">
           <a href="https://www.facebook.com/o.school.online" title="O!School Facebook" target="_blank" class="header-link header-link__facebook"></a>
           <a href="https://www.instagram.com/o.school.online" title="O!School Instagram" target="_blank" class="header-link header-link__instagram"></a>
@@ -37,13 +29,13 @@
   </header>
   <!-- /.header -->
 
-  <section class="english">
+  <section class="english" id="english">
     <div class="container">
       <div class="english-wrapper">
         <div class="english-main">
           <div class="english-title">Английский язык в O!School</div>
           <div class="english-main__info">
-            <div class="english-info">
+            <div class="english-info__left">
               <h2 class="english-subtitle">Программы занятий</h2>
               <ul class="english-info__list">
                 <li class="english-info__article">
@@ -68,7 +60,7 @@
                   </span>
                 </li>
               </ul>
-              <h2 class="english-subtitle">Цены и форматы занятий по английскому языку</h2>
+              <h2 class="english-subtitle">Цены и форматы занятий <br> по английскому языку</h2>
               <ul class="english-info__list">
                 <li class="english-info__article">
                   <span clas="english-info__title">
@@ -104,42 +96,118 @@
                 </li>
               </ul>
             </div>
-            <div class="english-form"></div>
+            <div class="english-info__right">
+              <form action="" class="subs-form" id="contact-form-subjects">
+                <h2 class="english-subtitle">Запись на урок</h2>
+                <div class="subs-form__container">
+                  <div class="subs-form__header">
+                    <div class="subs-form__head">
+                      <label for="uname-subs"><b>Ваше имя</b></label>
+                      <input type="text" placeholder="Имя" name="uname-subs" class="subs-form__input inputs" required>
+                    </div>
+                    <div class="subs-form__head">
+                      <label for="yourphone-subs"><b>Номер телефона</b></label>
+                      <input type="tel" name="yourphone-subs" placeholder="+38(000)-000-00-00" class="subs-form__input phone-input inputs" required>
+                    </div>   
+                    <input type="text" class="subs-undisplay teacher-input">
+                    <input type="text" class="subs-undisplay subject-input">
+                    <div class="subs-form__head">
+                      <label for="howto-subs"><b>Как с Вами связаться?</b></label>
+                      <select type="tel" name="howto-subs" class="subs-form__select inputs">
+                        <option>Тел. звонок</option>
+                        <option>Viber</option>
+                        <option>Telegram</option>
+                        <option>WhatsApp</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="subs-form__message">
+                    <label for="yourtext"><b>Ваше сообщение</b></label>
+                    <textarea type="text" name="yourtext-subs" class="subs-form__textarea inputs" placeholder="В какое время вам лучше позвонить, чтоб уточнить детали?"></textarea>
+                  </div>
+                  <button type="submit" class="subs-form__btn">Записаться на урок</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
         <div class="english-teacher">
           <div class="english-teacher__image">
             <img src="../img/teachers/diana-img.jpg" alt="diana-img" class="english-teacher__img">
           </div>
-          <div class="english-teacher__about">«Желание преподавать было с детства. Нравится обучать других тому, что умею сама, нравится делиться своими знаниями.<br>
-          Почему именно английский? Этот язык я изучаю с раннего детства, с 4-х лет. Просто не представляю другой предмет для преподавания.<br>Наверное, нет того, кто не знал бы о необходимости знания английского — язык может пригодиться везде: в учебе, в работе, в путешествиях, для самообразования, для жизни в англоговорящей стране.<br>
-          Если бы я не преподавала, то, скорее всего, занималась бы переводами. Моё первое высшее образование — юридическое, а моя основная работа — юрист-международник.<br>
-          Онлайн-формат люблю прежде всего за то, что можно обучать ученика из любого города и любой страны. Плюс то, что занятия проходят в комфортной для ученика обстановке, при любых условиях, в любое удобное дня ученика время (например, занятие все равно можно посетить, если уехать из дома на урок к репетитору мешает плохая погода или какие-то жизненные обстоятельства). <br>
-          Быть преподавателем мне нравится и даётся не сложно, потому что обладаю важными для такой работы качествами — терпеливостью, целеустремленностью, доброжелательностью, коммуникабельностью», — Диана, преподаватель английского в O!School.
+          <div class="english-teacher__about">
+            <div class="english-teacher__block1">
+            «Желание преподавать было с детства. Нравится обучать других тому, что умею сама, нравится делиться своими знаниями.<br>
+            Почему именно английский? Этот язык я изучаю с раннего детства, с 4-х лет. Просто не представляю другой предмет для преподавания.<br>Наверное, нет того, кто не знал бы о необходимости знания английского — язык может пригодиться везде: в учебе, в работе, в путешествиях, для самообразования, для жизни в англоговорящей стране.
+            </div>
+            <div class="english-teacher__block2">
+            Если бы я не преподавала, то, скорее всего, занималась бы переводами. Моё первое высшее образование — юридическое, а моя основная работа — юрист-международник.<br>
+            Онлайн-формат люблю прежде всего за то, что можно обучать ученика из любого города и любой страны. Плюс то, что занятия проходят в комфортной для ученика обстановке, при любых условиях, в любое удобное дня ученика время (например, занятие все равно можно посетить, если уехать из дома на урок к репетитору мешает плохая погода или какие-то жизненные обстоятельства). <br>
+            Быть преподавателем мне нравится и даётся не сложно, потому что обладаю важными для такой работы качествами — терпеливостью, целеустремленностью, доброжелательностью, коммуникабельностью», — Диана, преподаватель английского в O!School.
+            </div>
+            <a class="english-toggle" href="#">Развернуть &#8659;</a>
           </div>
         </div>
       </div>
+      </div>
     </div>
-    
   </section>
   <!-- /.english -->
+
+  <section class="revs">
+    <div class="container">
+      <div class="revs-wrapper">
+        <div class="revs-header">
+          <h1 class="revs-title">Отзывы о преподавателе</h1>
+        </div>
+        <div class="revs-slider">
+          <div class="revs-slider__container">
+            <div class="revs-slider__item active-slide">
+              <img src="../img/reviews/rev1.jpg" alt="" class="revs-slider__img">
+            </div>
+            <div class="revs-slider__item">
+              <img src="../img/reviews/rev2.jpg" alt="" class="revs-slider__img">
+            </div>
+            <div class="revs-slider__item">
+              <img src="../img/reviews/rev3.jpg" alt="" class="revs-slider__img">
+            </div>
+          </div>
+        </div>
+        <ul class="revs-slider__dots"></ul>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-wrapper">
         <div class="footer-left">
           <div class="footer-logo"></div>
-          <div class="footer-copyright">© 2019-2020 O!School. Все права защищены.</div>
         </div>
-        <div class="footer-scroll__bg">
-          <a href="#main" class="footer-scroll__link"></a>
+        <div class="footer-scroll__sub">
+          <div class="footer-copyright__sub">© 2019-2020 O!School. Все права защищены.</div>
         </div>
       </div>
     </div>
   </footer>
   <!-- /.footer -->
 
-  <script type="text/javascript" src="../dist/main.js"></script>
+  <script type="text/javascript" src="../dist/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.english-toggle').click(function(){
+        $('.english-teacher__block2').slideToggle(300, function(){
+          if ($(this).is(':hidden')) {
+            $('.english-toggle').html('Развернуть &#8659;');
+          } else {
+            $('.english-toggle').html('Свернуть &#8657;');
+          }							
+        });
+        return false;
+      });
+    });
+  </script>
+  <script type="text/javascript" src="../dist/sliderReviews.js"></script>
 
 </body>
 </html>
