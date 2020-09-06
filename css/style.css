@@ -1450,8 +1450,10 @@ body {
   height: auto;
   min-height: 100vh;
   width: 100%;
-  padding-top: 80px;
+  padding-top: 100px;
   font-family: 'Futura-Medium', sans-serif;
+  background: url("../img/lines.png") repeat-y top left, #fff;
+  background-size: 70px;
 }
 
 .english-wrapper {
@@ -1484,9 +1486,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 50px;
 }
 
@@ -1511,14 +1513,13 @@ body {
 
 .english-subtitle {
   font-size: 25px;
-  color: #00a99d;
+  color: #f7931e;
   font-weight: normal;
-  margin: auto;
 }
 
 .english-info__left {
-  -ms-flex-preferred-size: 47%;
-      flex-basis: 47%;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1533,8 +1534,8 @@ body {
 }
 
 .english-info__right {
-  -ms-flex-preferred-size: 47%;
-      flex-basis: 47%;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
 }
 
 .english-info__list {
@@ -1619,6 +1620,8 @@ body {
   min-height: 100vh;
   width: 100%;
   font-family: 'Futura-Medium', sans-serif;
+  background: url("../img/lines.png") repeat-y top right, #fff;
+  background-size: 70px;
 }
 
 .revs-wrapper {
@@ -1757,9 +1760,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -1836,7 +1839,7 @@ body {
 }
 
 .subs-form__textarea {
-  height: 120px;
+  height: 100px;
   padding: 10px;
 }
 
@@ -1862,6 +1865,7 @@ body {
   display: block;
   width: 100%;
   margin: 10px 0;
+  margin-top: 5px;
   border-radius: 5px;
   border: 2px solid #000;
   outline: none;
