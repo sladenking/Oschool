@@ -1437,7 +1437,7 @@ body {
   height: 60px;
 }
 
-.english {
+.subject {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1456,7 +1456,7 @@ body {
   background-size: 70px;
 }
 
-.english-wrapper {
+.subject-wrapper {
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1473,7 +1473,7 @@ body {
           align-items: center;
 }
 
-.english-main {
+.subject-main {
   height: auto;
   width: 100%;
   display: -webkit-box;
@@ -1492,7 +1492,7 @@ body {
   margin-bottom: 50px;
 }
 
-.english-main__info {
+.subject-main__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1505,19 +1505,19 @@ body {
           align-items: flex-start;
 }
 
-.english-title {
+.subject-title {
   font-size: 30px;
   color: #f7931e;
   margin-bottom: 20px;
 }
 
-.english-subtitle {
+.subject-subtitle {
   font-size: 25px;
   color: #f7931e;
   font-weight: normal;
 }
 
-.english-info__left {
+.subject-info__left {
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
   display: -webkit-box;
@@ -1533,24 +1533,24 @@ body {
   text-align: left;
 }
 
-.english-info__right {
+.subject-info__right {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
 }
 
-.english-info__list {
+.subject-info__list {
   margin-top: 0;
   font-size: 20px;
   padding-left: 20px;
 }
 
-.english-info__article {
+.subject-info__article {
   color: #00a99d;
   list-style: none;
   margin-top: 10px;
 }
 
-.english-info__article::before {
+.subject-info__article::before {
   content: "\2022";
   color: #f7931e;
   font-weight: bold;
@@ -1559,11 +1559,11 @@ body {
   margin-left: -1em;
 }
 
-.english-info__subtitle {
+.subject-info__subtitle {
   color: #000;
 }
 
-.english-teacher {
+.subject-teacher {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1576,12 +1576,12 @@ body {
           align-items: flex-start;
 }
 
-.english-teacher__image {
+.subject-teacher__image {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
 }
 
-.english-teacher__about {
+.subject-teacher__about {
   -ms-flex-preferred-size: 55%;
       flex-basis: 55%;
   font-family: 'Futura-Medium', sans-serif;
@@ -1589,16 +1589,16 @@ body {
   font-size: 20px;
 }
 
-.english-teacher__img {
+.subject-teacher__img {
   width: 400px;
   height: 400px;
 }
 
-.english-teacher__block2 {
+.subject-teacher__block2 {
   display: none;
 }
 
-.english-toggle {
+.subject-toggle {
   display: block;
   width: 110px;
   padding-top: 10px;
