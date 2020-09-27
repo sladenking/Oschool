@@ -98,23 +98,23 @@
               </ul>
             </div>
             <div class="subject-info__right">
-              <form action="" class="subs-form" id="contact-form-subjects">
+              <form action="contact-form.php" class="subs-form" id="contact-form-math">
                 <h2 class="subject-subtitle">Запись на урок</h2>
                 <div class="subs-form__container">
                   <div class="subs-form__header">
                     <div class="subs-form__head">
-                      <label for="uname-subs"><b>Ваше имя</b></label>
-                      <input type="text" placeholder="Имя" name="uname-subs" class="subs-form__input inputs" required>
+                      <label for="uname-math"><b>Ваше имя</b></label>
+                      <input type="text" placeholder="Имя" name="uname-math" class="subs-form__input inputs" required>
                     </div>
                     <div class="subs-form__head">
-                      <label for="yourphone-subs"><b>Номер телефона</b></label>
-                      <input type="tel" name="yourphone-subs" placeholder="+38(000)-000-00-00" class="subs-form__input phone-input inputs" required>
+                      <label for="yourphone-math"><b>Номер телефона</b></label>
+                      <input type="tel" name="yourphone-math" placeholder="+38(000)-000-00-00" class="subs-form__input phone-input inputs" required>
                     </div>   
                     <input type="text" class="subs-undisplay teacher-input">
                     <input type="text" class="subs-undisplay subject-input">
                     <div class="subs-form__head">
-                      <label for="howto-subs"><b>Как с Вами связаться?</b></label>
-                      <select type="tel" name="howto-subs" class="subs-form__select inputs">
+                      <label for="howto-math"><b>Как с Вами связаться?</b></label>
+                      <select type="tel" name="howto-math" class="subs-form__select inputs">
                         <option>Тел. звонок</option>
                         <option>Viber</option>
                         <option>Telegram</option>
@@ -123,8 +123,8 @@
                     </div>
                   </div>
                   <div class="subs-form__message">
-                    <label for="yourtext-subs"><b>Ваше сообщение</b></label>
-                    <textarea type="text" name="yourtext-subs" class="subs-form__textarea inputs" placeholder="В какое время вам лучше позвонить, чтоб уточнить детали?"></textarea>
+                    <label for="yourtext-math"><b>Ваше сообщение</b></label>
+                    <textarea type="text" name="yourtext-math" class="subs-form__textarea inputs" placeholder="В какое время вам лучше позвонить, чтоб уточнить детали?"></textarea>
                   </div>
                   <button type="submit" class="subs-form__btn">Записаться на урок</button>
                 </div>
@@ -189,6 +189,44 @@
   <!-- /.footer -->
 
   <script type="text/javascript" src="../dist/sliderReviews.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function () {
+      $('#contact-form-math').submit(function () {
+        var formID = $(this).attr('id'); // Получение ID формы
+        var formNm = $('#' + formID);
+        $.ajax({
+          type: 'POST',
+          url: 'contact-form.php', // Обработчик формы отправки
+          data: formNm.serialize(),
+          success: function (data) {
+            // Вывод текста результата отправки в текущей форме
+            setTimeout(function(){
+              $('#contact-form-math')[0].reset();
+              setTimeout(function(){
+
+                var id = 'contact-form-math';
+                var html = '<div id="contact-form-math">' +
+                        '<span style="text-align: center;">Спасибо! Мы свяжемся с вами в ближайшее время.</span>\n' + '</div>';
+                var obj=document.getElementById(id);
+                var o=document.createElement('div');
+                o.innerHTML=html;
+                obj.innerHTML=o.children[0].innerHTML;
+
+              }, 1000);
+
+            }, 2000);
+
+
+          }
+        });
+        return false;
+      });
+    });
+
+    $(document).ready(function(){
+      $('.phone__input').mask('+38(000)-000-00-00');
+    });
+  </script>
 
 </body>
 </html>

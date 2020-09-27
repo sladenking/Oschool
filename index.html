@@ -424,7 +424,7 @@
   <div class="popup">
     <div class="popup-content">
       <button class="popup-close">&times;</button>
-      <form action="" class="popup-form" id="contact-form-modal">
+      <form action="contact-form.php" class="popup-form" id="contact-form-modal">
         <span class="popup-title">Запись на урок <span class="popup-subject"></span> к <span class="popup-teacher"></span></span>
         <div class="popup-form__container">
           <div class="popup-form__header">
@@ -436,8 +436,8 @@
               <label for="yourphone-modal"><b>Номер телефона</b></label>
               <input type="tel" name="yourphone-modal" placeholder="+38(000)-000-00-00" class="popup-form__input phone-input inputs" required>
             </div>   
-            <input type="text" class="popup-undisplay teacher-input">
-            <input type="text" class="popup-undisplay subject-input">
+            <input type="text" class="popup-undisplay teacher-input" name="teacher-modal">
+            <input type="text" class="popup-undisplay subject-input" name="subject-modal">
             <div class="popup-form__head">
               <label for="howto-modal"><b>Как с Вами связаться?</b></label>
               <select type="tel" name="howto-modal" class="popup-form__select inputs">
@@ -496,6 +496,36 @@
 
                 var id = 'contact-form-feedback';
                 var html = '<div id="contact-form-feedback">' +
+                        '<span style="text-align: center;">Спасибо! Мы свяжемся с вами в ближайшее время.</span>\n' + '</div>';
+                var obj=document.getElementById(id);
+                var o=document.createElement('div');
+                o.innerHTML=html;
+                obj.innerHTML=o.children[0].innerHTML;
+
+              }, 1000);
+
+            }, 2000);
+
+
+          }
+        });
+        return false;
+      });
+      $('#contact-form-modal').submit(function () {
+        var formID = $(this).attr('id'); // Получение ID формы
+        var formNm = $('#' + formID);
+        $.ajax({
+          type: 'POST',
+          url: 'contact-form.php', // Обработчик формы отправки
+          data: formNm.serialize(),
+          success: function (data) {
+            // Вывод текста результата отправки в текущей форме
+            setTimeout(function(){
+              $('#contact-form-modal')[0].reset();
+              setTimeout(function(){
+
+                var id = 'contact-form-modal';
+                var html = '<div id="contact-form-modal">' +
                         '<span style="text-align: center;">Спасибо! Мы свяжемся с вами в ближайшее время.</span>\n' + '</div>';
                 var obj=document.getElementById(id);
                 var o=document.createElement('div');
