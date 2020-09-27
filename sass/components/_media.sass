@@ -46,6 +46,10 @@
   .main
     &-title
       font-size: 40px
+  .subject
+    background-size: 30px
+    &-subtitle
+      margin: 0
   .about
     background-size: 30px
     &-wrapper
@@ -93,6 +97,7 @@
         height: 750px
   .revs
     min-height: 0
+    background-size: 30px
     &-wrapper
       padding-bottom: 25px
     &-slider
@@ -128,12 +133,27 @@
     font-size: 20px
 
 @media (max-width: 900px)
+  .subject
+    padding-top: 70px
+    &-main__info
+      flex-direction: column
+    &-subtitle
+      width: 100%
+      text-align: center
+    &-info__right
+      flex-basis: 100%
+      width: 100%
   .container
     max-width: 90%
+    width: 90%
   .main
     background: url('../img/left-bg.png') no-repeat left -450px top -20px fixed, url('../img/right-bg.png') no-repeat right -450px top -20px fixed, url(../img/main-bg.jpg) no-repeat top center fixed
 
 @media (max-width: 600px)
+  .header
+    &-logo
+      background: url('../img/logo-phone.svg') no-repeat center left
+      width: 50px
   .main
     &-title
       font-size: 30px
@@ -151,14 +171,24 @@
       height: auto
     &-img
       height: 300px
-  .about, .subjects, .teachers, .questions
+  .about, .subjects, .teachers, .questions, .revs, .subject
     background-size: 15px
+  .subject-teacher
+    flex-direction: column
+  .footerS
+    &-wrapper
+      flex-direction: column
+      justify-content: center
+      align-items: flex-start
+    &-left
+      margin-bottom: 15px
+  .header
+    &-back
+      display: none
+      &-mob
+        display: flex
 
 @media (max-width: 500px)
-  .header
-    &-logo
-      background: url('../img/logo-phone.svg') no-repeat center left
-      width: 50px
   .main
     &-title
       font-size: 25px
@@ -233,4 +263,6 @@
       &__img
         height: 450px
   .footer-copyright
+    font-size: 10px
+  .footerS-copyright__sub
     font-size: 10px

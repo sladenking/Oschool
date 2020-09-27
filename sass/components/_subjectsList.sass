@@ -79,8 +79,8 @@
       font-weight: normal
       font-size: 20px
     &__img
-      width: 400px
-      height: 400px
+      width: 100%
+      height: auto
     &__block2
       display: none
   &-toggle
@@ -227,6 +227,33 @@
       &:hover
         color: #ffffff
         background-color: $primary
+
+.footerS
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 140px
+  width: 100%
+  background: $primary
+  transition: all 0.3s
+  .container
+    height: 100%
+  &-wrapper
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-logo
+    background: url('../img/logo.svg') no-repeat center center
+    height: 40px 
+    width: 190px
+  &-copyright
+    +norm
+    color: #fff
+    margin-top: 15px
+    &__sub
+      +norm
+      color: #fff
 
 .inputs
   display: block
