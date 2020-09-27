@@ -188,27 +188,39 @@
         <h1 class="teachers-title">Наши преподаватели</h1>
         <div class="teachers-list">
           <div class="teachers-item">
-            <img src="./img/teachers/yaroslava-img.jpg" alt="yaroslava-img" class="teachers-img">
+            <a href="./templates/math.html" class="teachers-item__link">
+              <img src="./img/teachers/yaroslava-img.jpg" alt="yaroslava-img" class="teachers-img">
+            </a>
             <button class="teachers-btn yaroslava-btn">Записаться на урок к Ярославе</button>
           </div>
           <div class="teachers-item">
-            <img src="./img/teachers/alina-img.jpg" alt="alina-img" class="teachers-img">
+            <a href="./templates/ukrainian.html" class="teachers-item__link">
+              <img src="./img/teachers/alina-img.jpg" alt="alina-img" class="teachers-img">
+            </a>
             <button class="teachers-btn alina-btn">Записаться на урок к Алине</button>
           </div>
           <div class="teachers-item">
-            <img src="./img/teachers/diana-img.jpg" alt="diana-img" class="teachers-img">
+            <a href="./templates/english.html" class="teachers-item__link">
+              <img src="./img/teachers/diana-img.jpg" alt="diana-img" class="teachers-img">
+            </a>
             <button class="teachers-btn diana-btn">Записаться на урок к Диане</button>
           </div>
           <div class="teachers-item">
-            <img src="./img/teachers/irina-img.jpg" alt="irina-img" class="teachers-img">
+            <a href="./templates/chemistry.html" class="teachers-item__link">
+              <img src="./img/teachers/irina-img.jpg" alt="irina-img" class="teachers-img">
+            </a>
             <button class="teachers-btn irina-btn">Записаться на урок к Ирине</button>
           </div>
           <div class="teachers-item">
-            <img src="./img/teachers/daria-img.jpg" alt="daria-img" class="teachers-img">
+            <a href="./templates/bi.html" class="teachers-item__link">
+              <img src="./img/teachers/daria-img.jpg" alt="daria-img" class="teachers-img">
+            </a>
             <button class="teachers-btn daria-btn">Записаться на урок к Дарье</button>
           </div>
           <div class="teachers-item">
-            <img src="./img/teachers/irina-ukr-img.jpg" alt="irina-ukr-img" class="teachers-img">
+            <a href="./templates/ukrainian.html" class="teachers-item__link">
+              <img src="./img/teachers/irina-ukr-img.jpg" alt="irina-ukr-img" class="teachers-img">
+            </a>
             <button class="teachers-btn irina-ukr-btn">Записаться на урок к Ирине</button>
           </div>
         </div>
@@ -373,20 +385,20 @@
     <div class="container">
       <div class="feedback-wrapper">
         <h1 class="feedback-title">Остались вопросы?</h1>
-        <form action="contact-form.php" class="feedback-form" id="contact-form-feedback">
+        <form action="form-feedback.php" class="feedback-form" id="contact-form-feedback">
           <div class="feedback-form__container">
             <div class="feedback-form__header">
               <div class="feedback-form__head">
-                <label for="uname"><b>Ваше имя</b></label>
-                <input type="text" placeholder="Имя" name="uname" class="feedback-form__input inputs" required>
+                <label for="uname-feedback"><b>Ваше имя</b></label>
+                <input type="text" placeholder="Имя" name="uname-feedback" class="feedback-form__input inputs" required>
               </div>
               <div class="feedback-form__head">
-                <label for="phone"><b>Номер телефона</b></label>
-                <input type="tel" name="yourphone" placeholder="+38(000)-000-00-00" class="feedback-form__input phone__input inputs" required>
+                <label for="yourphone-feedback"><b>Номер телефона</b></label>
+                <input type="tel" name="yourphone-feedback" placeholder="+38(000)-000-00-00" class="feedback-form__input phone__input inputs" required>
               </div>
               <div class="feedback-form__head">
-                <label for="phone"><b>Как с Вами связаться?</b></label>
-                <select type="tel" name="howto" class="feedback-form__select inputs" required="required">
+                <label for="howto-feedback"><b>Как с Вами связаться?</b></label>
+                <select type="tel" name="howto-feedback" class="feedback-form__select inputs" required="required">
                   <option value="Тел. звонок">Тел. звонок</option>
                   <option value="Viber">Viber</option>
                   <option value="Telegram">Telegram</option>
@@ -395,8 +407,8 @@
               </div>
             </div>
             <div class="feedback-form__message">
-              <label for="text"><b>Ваше сообщение</b></label>
-              <textarea type="text" name="yourtext" class="feedback-form__textarea inputs"
+              <label for="yourtext-feedback"><b>Ваше сообщение</b></label>
+              <textarea type="text" name="yourtext-feedback" class="feedback-form__textarea inputs"
                         placeholder="Спросите, что именно вас интересует и мы отправим вам нужную информацию или напишите время, когда вы хотите чтобы мы с вами связались!" required="required"></textarea>
             </div>
             <button type="submit" class="feedback-form__btn">Отправить сообщение</button>
@@ -424,7 +436,7 @@
   <div class="popup">
     <div class="popup-content">
       <button class="popup-close">&times;</button>
-      <form action="contact-form.php" class="popup-form" id="contact-form-modal">
+      <form action="form-modal.php" class="popup-form" id="contact-form-modal">
         <span class="popup-title">Запись на урок <span class="popup-subject"></span> к <span class="popup-teacher"></span></span>
         <div class="popup-form__container">
           <div class="popup-form__header">
@@ -486,7 +498,7 @@
         var formNm = $('#' + formID);
         $.ajax({
           type: 'POST',
-          url: 'contact-form.php', // Обработчик формы отправки
+          url: 'form-feedback.php', // Обработчик формы отправки
           data: formNm.serialize(),
           success: function (data) {
             // Вывод текста результата отправки в текущей форме
@@ -495,13 +507,14 @@
               setTimeout(function(){
 
                 var id = 'contact-form-feedback';
-                var html = '<div id="contact-form-feedback">' +
-                        '<span style="text-align: center;">Спасибо! Мы свяжемся с вами в ближайшее время.</span>\n' + '</div>';
+                var html = '<span style="text-align: center;" class="poof">Спасибо! Мы свяжемся с вами в ближайшее время.</span>\n';
                 var obj=document.getElementById(id);
                 var o=document.createElement('div');
                 o.innerHTML=html;
-                obj.innerHTML=o.children[0].innerHTML;
-
+                obj.append(o);
+                setTimeout(function () {
+                  $('.poof')[0].remove();
+                }, 3000);
               }, 1000);
 
             }, 2000);
@@ -516,7 +529,7 @@
         var formNm = $('#' + formID);
         $.ajax({
           type: 'POST',
-          url: 'contact-form.php', // Обработчик формы отправки
+          url: 'form-modal.php', // Обработчик формы отправки
           data: formNm.serialize(),
           success: function (data) {
             // Вывод текста результата отправки в текущей форме
@@ -525,13 +538,14 @@
               setTimeout(function(){
 
                 var id = 'contact-form-modal';
-                var html = '<div id="contact-form-modal">' +
-                        '<span style="text-align: center;">Спасибо! Мы свяжемся с вами в ближайшее время.</span>\n' + '</div>';
+                var html = '<span style="text-align: center;" class="poof">Спасибо! Мы свяжемся с вами в ближайшее время.</span>\n';
                 var obj=document.getElementById(id);
                 var o=document.createElement('div');
                 o.innerHTML=html;
-                obj.innerHTML=o.children[0].innerHTML;
-
+                obj.append(o);
+                setTimeout(function () {
+                  $('.poof')[0].remove();
+                }, 3000);
               }, 1000);
 
             }, 2000);

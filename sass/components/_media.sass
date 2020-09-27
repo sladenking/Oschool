@@ -122,13 +122,38 @@
       &__header
         flex-direction: column
       &__message
-        font-size: 25px
+        margin-top: 0
       &__head
         width: 100%
-        font-size: 25px
-        margin-bottom: 15px
+        margin-bottom: 0
       &__btn
         font-size: 25px
+  .popup
+    &-title
+      width: 75%
+    &-close
+      right: 10%
+    &-content
+      width: 500px
+    &-form
+      width: 100%
+      height: 100%
+      &__textarea
+        height: 120px
+      &__container
+        width: 90%
+        height: 90%
+      &__head
+        margin-bottom: 0
+        width: 100%
+      &__header
+        flex-direction: column
+      &__message
+        margin-top: 0
+      &__btn
+        font-size: 25px
+        margin-top: 0
+        margin-bottom: 20px
   .inputs
     font-size: 20px
 
@@ -166,6 +191,8 @@
   .feedback-form
     width: 100%
     height: 650px
+  .popup-content
+    width: 90%
   .about
     &-wrapper
       height: auto
@@ -187,6 +214,13 @@
       display: none
       &-mob
         display: flex
+  .teachers-item
+    flex-basis: 48%
+  .reviews-slider__dots
+    .dot-reviews
+      width: 10px
+      height: 10px
+      margin: 0 3px
 
 @media (max-width: 500px)
   .main
@@ -237,6 +271,8 @@
     height: 10px
     width: 10px
     margin: 0 3px
+  .popup-form__textarea
+    height: 170px
 
 @media (max-width: 400px)
   .main

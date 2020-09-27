@@ -84,5 +84,3 @@ const sliderTeachers = () => {
     });
   }
 };
-
-export default sliderTeachers;
